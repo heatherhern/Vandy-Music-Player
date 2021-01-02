@@ -1,3 +1,3 @@
 module.exports = {
-    Playlist: require("./playlist"),
+    Song: require("./song"),
 };
