@@ -92,7 +92,9 @@ class App extends Component {
     return (
       <div className="wrapper">
         <div className="form-wrapper">
+          <div className="headerTitle">
           <h1>Create Account</h1>
+          </div>
           <form onSubmit={this.handleSubmit} noValidate>
             <div className="firstName">
               <label htmlFor="firstName">First Name</label>
@@ -153,6 +155,7 @@ class App extends Component {
             <div className="createAccount">
               <button type="submit">Create Account</button>
               <small>Already Have an Account?</small>
+              <small><a href="" class="active">Login</a></small>
             </div>
           </form>
         </div>
