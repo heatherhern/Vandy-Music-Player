@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import { Link } from "react";
 import "./App.css";
 
 const emailRegex = RegExp(
@@ -39,6 +40,7 @@ class App extends Component {
     };
   }
 
+  // Console Log User Input
   handleSubmit = e => {
     e.preventDefault();
 
@@ -155,7 +157,7 @@ class App extends Component {
             <div className="createAccount">
               <button type="submit">Create Account</button>
               <small>Already Have an Account?</small>
-              <small><a href="" class="active">Login</a></small>
+              <small>Login</small>
             </div>
           </form>
         </div>
