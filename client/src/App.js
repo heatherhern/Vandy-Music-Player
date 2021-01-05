@@ -166,4 +166,14 @@ class App extends Component {
   }
 }
 
+// function App() {
+//   return (
+//     <div>
+//       <Container />
+//       <Search />
+//       <SearchResults />
+//     </div>
+//   );
+// }
+
 export default App;
