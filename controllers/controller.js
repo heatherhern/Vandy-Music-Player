@@ -1,5 +1,6 @@
 const db = require("../models");
 const axios = require("axios");
+require('dotenv').config()
 
 
 module.exports = {
@@ -10,8 +11,8 @@ module.exports = {
             method: 'GET',
             url: 'https://deezerdevs-deezer.p.rapidapi.com/search?q=' + req.params.title,
             headers: {
-                'x-rapidapi-key': '51a5c1610dmsh2b1ce414cd0adadp170608jsnc37c2b314de8',
-                'x-rapidapi-host': 'deezerdevs-deezer.p.rapidapi.com'
+                'x-rapidapi-key': 'process.env.x-rapidapi-key',
+                'x-rapidapi-host': 'process.env.x-rapidapi-host'
             }
         };
 
