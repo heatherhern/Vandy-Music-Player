@@ -14,6 +14,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+// Require Routes
+app.use(require("./routes/playlistRoute"));
+app.use(require("./routes/userAuthRoute"));
+
 // Connect to Database
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/playlist",
     {

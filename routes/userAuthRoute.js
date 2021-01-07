@@ -7,3 +7,4 @@ router.route("/userAuth")
     .post(controller.save)
 
 module.exports = router;
+
