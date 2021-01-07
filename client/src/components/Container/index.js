@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Search from "../Search/Search";
 import SearchResults from "../SearchResults/SearchResults";
-import "./container.css";
+import "./style.css";
 
 class Container extends Component {
     state = {

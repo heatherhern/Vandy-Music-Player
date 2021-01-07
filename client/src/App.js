@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import CreateAccount from "./components/CreateAccount";
-// import Login from "./components/Login";
-import Search from "./components/Search/Search";
-import SearchResults from "./components/SearchResults/SearchResults";
+import Login from "./components/Login";
+import Search from "./components/Search";
+import SearchResults from "./components/SearchResults";
 
 function App() {
   return (
