@@ -5,7 +5,7 @@ function Search(props) {
     return (
         <input
         type="text"
-            // onChange={props.handleInputChange}
+            onChange={props.handleInputChange}
             placeholder="Search by Artist, Album, or Song"
         ></input>
     );

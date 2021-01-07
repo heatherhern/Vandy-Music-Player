@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import CreateAccount from "./components/CreateAccount";
 // import Login from "./components/Login";
 import Search from "./components/Search/Search";
+import SearchResults from "./components/SearchResults/SearchResults";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           </Route> */}
           <Route exact path="/search">
             <Search />
+            <SearchResults />
           </Route>
         </Switch>
       </div>
