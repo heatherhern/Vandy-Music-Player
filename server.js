@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3001;
 const db = require("./models");
 const app = express();
 
+
 app.use(logger("dev"));
 
 // Use Express
@@ -22,17 +23,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/playlist",
         useFindAndModify: false
     }
 );
-
-// Connect to UserAuth Database (Adding this broke the connection)
-
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/userauth",
-//     {
-//         useNewUrlParser: true,
-//         useUnifiedTopology: true,
-//         useCreateIndex: true,
-//         useFindAndModify: false    
-//     }
-// );
 
 // Start Server
 app.listen(PORT, () => {
