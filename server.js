@@ -6,12 +6,17 @@ const PORT = process.env.PORT || 3001;
 const db = require("./models");
 const app = express();
 
+
 app.use(logger("dev"));
 
 // Use Express
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
+
+// Require Routes
+app.use(require("./routes/playlistRoute"));
+app.use(require("./routes/userAuthRoute"));
 
 // Connect to Database
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/playlist",

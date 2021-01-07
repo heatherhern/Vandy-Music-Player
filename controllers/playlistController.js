@@ -9,7 +9,7 @@ module.exports = {
     apiCall: (req, res) => {
         const options = {
             method: 'GET',
-            url: 'https://deezerdevs-deezer.p.rapidapi.com/search?q=' + req.params.title,
+            url: 'https://deezerdevs-deezer.p.rapidapi.com/search?q=' + req.params,
             headers: {
                 'x-rapidapi-key': 'process.env.x-rapidapi-key',
                 'x-rapidapi-host': 'process.env.x-rapidapi-host'
@@ -44,7 +44,7 @@ module.exports = {
         db.Song
             .findById({ _id: req.params.id })
             .then(dbModel => dbModel.remove())
-            .then(dbModel => res.json(dbmodel))
+            .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
     },
 };
