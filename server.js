@@ -23,17 +23,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/playlist",
     }
 );
 
-// Connect to UserAuth Database (Adding this broke the connection)
-
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/userauth",
-//     {
-//         useNewUrlParser: true,
-//         useUnifiedTopology: true,
-//         useCreateIndex: true,
-//         useFindAndModify: false    
-//     }
-// );
-
 // Start Server
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
