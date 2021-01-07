@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import CreateAccount from "./components/CreateAccount";
-// import Login from "./components/Login";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -11,9 +11,9 @@ function App() {
           <Route exact path={["/", "/createaccount"]}>
             <CreateAccount />
           </Route>
-          {/* <Route exact path="/login">
+          <Route exact path="/login">
             <Login />
-          </Route> */}
+          </Route>
         </Switch>
       </div>
     </Router>
