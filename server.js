@@ -13,6 +13,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+// Require Routes
+app.use(require("./routes/playlistRoute"));
+app.use(require("./routes/userAuthRoute"));
+
 // Connect to Database
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/playlist",
     {
@@ -22,17 +26,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/playlist",
         useFindAndModify: false
     }
 );
-
-// Connect to UserAuth Database (Adding this broke the connection)
-
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/userauth",
-//     {
-//         useNewUrlParser: true,
-//         useUnifiedTopology: true,
-//         useCreateIndex: true,
-//         useFindAndModify: false    
-//     }
-// );
 
 // Start Server
 app.listen(PORT, () => {
