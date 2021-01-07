@@ -133,3 +133,23 @@ light green: #A3C4BC
   .headerTitle {
     font-weight: bold;
   }
+
+  .login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login small {
+    color: #999;
+    margin-top: 1em;
+    padding: 8px 0px;
+    letter-spacing: 1px;
+    margin-bottom: 0.25em;
+  }
+
+  .login small:hover {
+    color: black;
+  }
+  

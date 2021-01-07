@@ -157,10 +157,12 @@ class CreateAccount extends Component {
             <div className="createAccount">
               <button type="submit">Create Account</button>
               <small>Already Have an Account?</small>
-              </div>
+            </div>
+            <div className="login">
               <Link to={"/login"}>
                 <small>Login</small>
               </Link>
+            </div>
           </form>
         </div>
       </div>
