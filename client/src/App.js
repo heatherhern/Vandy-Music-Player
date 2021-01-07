@@ -1,8 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import CreateAccount from "./components/CreateAccount";
-// import Search from "./components/Search";
-// import SearchResults from "./components/SearchResults";
 import Login from "./components/Login";
 
 function App() {
@@ -16,10 +14,6 @@ function App() {
           <Route exact path="/login">
             <Login />
           </Route>
-          {/* <Route exact path="/search">
-            <Search />
-            <SearchResults />
-          </Route> */}
         </Switch>
       </div>
     </Router>
