@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { useForm } from "react-hook-form";
 import "./style.css";
 
@@ -10,7 +10,7 @@ function Search() {
     }
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <input type="text" name="searchQuery" placeholder="Search by Artist, Album, or Song" ref={register}/>
+            <input type="text" name="searchQuery" className="searchQuery" placeholder="Search by Artist, Album, or Song" ref={register}/>
 
             <input type="submit" className="submit-btn" />
         </form>
