@@ -14,7 +14,7 @@ const playlistSchema = new Schema({
             album: { type: String, required: true },
             genre: String,
             albumArt: String,
-        }]   
+        }],
 });
 
 const Playlist = mongoose.model("Song", playlistSchema);
