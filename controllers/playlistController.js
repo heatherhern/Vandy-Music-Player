@@ -8,7 +8,7 @@ module.exports = {
     apiCall: (req, res) => {
         const options = {
             method: 'GET',
-            url: 'https://deezerdevs-deezer.p.rapidapi.com/search?q=' + req.params,
+            url: 'https://deezerdevs-deezer.p.rapidapi.com/search?q=' + req,
             headers: {
                 'x-rapidapi-key': 'process.env.x-rapidapi-key',
                 'x-rapidapi-host': 'process.env.x-rapidapi-host'
