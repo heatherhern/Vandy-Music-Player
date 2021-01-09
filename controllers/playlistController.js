@@ -2,7 +2,6 @@ const db = require("../models");
 const axios = require("axios");
 require('dotenv').config()
 
-
 module.exports = {
 
     // Make Api Call
