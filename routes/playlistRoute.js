@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const controller = require("../controllers/playlistController");
+const controller = require("../controllers/controller");
 
 router.route("/songs")
     .get(controller.findAll)
