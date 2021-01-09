@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Search from "../Search/Search";
-import SearchResults from "../SearchResults/SearchResults";
-import "./style.css";
+let axios = require('axios');
+import API from '../../utils/API';
 
 class Container extends Component {
     state = {
@@ -15,8 +14,8 @@ class Container extends Component {
         this.getResults();
     }
 
-    getResults = () => {
-        API.getResults()
+    getArtist = () => {
+        API.getArtist()
             .then((res) => {
                 this.initialResultsList = res.data.results;
                 this.setState({ results: res.data.results });
@@ -24,19 +23,14 @@ class Container extends Component {
             .catch((err) => console.log(err));
     };
 
-    handleInputChange = (e) => {
-        const searchQuery = e.target.value;
-        console.log(searchQuery);
-        this.setState({ results: this.initialResultsList });
-    }
-
     render() {
         return (
             <div className="container">
-                <Search handleInputChange={this.handleInputChange} />
+                {/* <Search handleInputChange={this.handleInputChange} />
+                <Table employees={this.state.employees} sortNames={this.sortNames} /> */}
             </div>
         );
-    };
+    }
 }
 
 export default Container;
