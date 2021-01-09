@@ -1,12 +1,20 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./style.css";
+import API from '../../utils/API';
 
 function Search() {
+
+
+
+
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
-        console.log(data);
+        let searchQuery = data;
+        console.log(searchQuery);
+
+        API.getArtist(searchQuery);
     }
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
