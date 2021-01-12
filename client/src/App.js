@@ -11,7 +11,6 @@ function App() {
     <Router>
       <div>
         <Switch>
-
           <Route exact path="/search">
             <Search />
             <SearchResults />
