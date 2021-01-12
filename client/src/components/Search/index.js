@@ -17,7 +17,7 @@ function Search() {
             <input type="text" name="searchQuery" className="searchQuery" placeholder="Search by Artist, Album, or Song" ref={register}/>
 
             <input type="submit" className="submit-btn" />
-        </form>
+        </form>   
     );
 }
 
