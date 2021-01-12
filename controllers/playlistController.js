@@ -8,7 +8,11 @@ module.exports = {
     apiCall: (req, res) => {
         const options = {
             method: 'GET',
+<<<<<<< HEAD
             url: 'http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=cher&api_key=bf8d3ec29d790d8fdc71b82b15ad96a3&format=json',
+=======
+            url: "http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=" + req + "&api_key=bf8d3ec29d790d8fdc71b82b15ad96a3&format=json",
+>>>>>>> main
         };
 
         axios.request(options).then(function (response) {
