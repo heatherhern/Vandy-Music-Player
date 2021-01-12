@@ -27,15 +27,15 @@ export default {
     deleteSong: function (id) {
         return axios.delete("/api/songs/" + id);
     },
- 
+
     getAlbum: function (query) {
         return axios.get("https://api.deezer.com/album/302127" + searchQuery);
     },
-  
+
     getArtist: function () {
         return axios.get("https://api.deezer.com/artist/" + searchQuery);
     },
-      
+
     getChart: function () {
         return axios.get("https://api.deezer.com/chart/" + searchQuery);
     }
