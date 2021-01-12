@@ -1,11 +1,21 @@
 import axios from "axios";
 import searchQuery from "../components/Search/";
+require('dotenv').config()
 
+
+// http://ws.audioscrobbler.com/2.0/?
+// method=artist.gettoptracks
+// &artist=
+// cher
+// &api_key=bf8d3ec29d790d8fdc71b82b15ad96a3&format=json
 
 // Export an object containing methods we'll use for accessing the playlist.
+
+
 export default {
     APICall: function (query) {
-        return axios.get("https://deezerdevs-deezer.p.rapidapi.com/search?q=" + query)
+        return axios.get("http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=" + searchQuery + "&api_key=" + process.env.api_key + "&format=json");
+        // console.log(res);
     },
 
     // Gets all Songs
