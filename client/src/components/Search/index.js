@@ -7,7 +7,7 @@ function Search() {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
-        let searchQuery = data.toString();
+        let searchQuery = data.searchQuery;
         console.log(searchQuery);
         
         API.APICall(searchQuery);
@@ -17,7 +17,7 @@ function Search() {
             <input type="text" name="searchQuery" className="searchQuery" placeholder="Search by Artist, Album, or Song" ref={register}/>
 
             <input type="submit" className="submit-btn" />
-        </form>   
+        </form>
     );
 }
 
