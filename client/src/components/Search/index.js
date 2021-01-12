@@ -4,17 +4,13 @@ import "./style.css";
 import API from '../../utils/API';
 
 function Search() {
-
-
-
-
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
-        let searchQuery = data;
+        let searchQuery = data.toString();
         console.log(searchQuery);
-
-        API.getArtist(searchQuery);
+        
+        API.APICall(searchQuery);
     }
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
