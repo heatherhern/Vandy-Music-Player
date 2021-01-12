@@ -8,11 +8,7 @@ module.exports = {
     apiCall: (req, res) => {
         const options = {
             method: 'GET',
-            url: 'https://deezerdevs-deezer.p.rapidapi.com/search?q=' + req,
-            headers: {
-                'x-rapidapi-key': 'process.env.x-rapidapi-key',
-                'x-rapidapi-host': 'process.env.x-rapidapi-host'
-            }
+            url: "http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=" + req + "&api_key=bf8d3ec29d790d8fdc71b82b15ad96a3&format=json",
         };
 
         axios.request(options).then(function (response) {

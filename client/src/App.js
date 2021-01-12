@@ -15,11 +15,11 @@ function App() {
             <Search />
             <SearchResults />
           </Route>
-
+          
           <Route exact path={["/", "/createaccount"]}>
             <CreateAccount />
           </Route>
-
+          
           <Route exact path="/login">
             <Login />
           </Route>
