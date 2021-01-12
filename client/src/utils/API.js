@@ -2,22 +2,18 @@ import axios from "axios";
 require('dotenv').config();
 
 export default {
-    APICall: function (searchQuery) {
-        return axios.get("http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=" + searchQuery + "&api_key=bf8d3ec29d790d8fdc71b82b15ad96a3&format=json");
+    getArtist: function (query) {
+        return axios.get("http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=" + query + "&api_key=bf8d3ec29d790d8fdc71b82b15ad96a3&format=json");
     },
 
     // getAlbum: function (query) {
-    //     return axios.get("https://api.deezer.com/album/302127" + query);
+    //     return axios.get("/2.0/?method=album.search&album=" + query + "&api_key=bf8d3ec29d790d8fdc71b82b15ad96a3&format=json");
     // },
-
-    // getArtist: function (query) {
-    //     return axios.get("https://api.deezer.com/artist/" + query);
+    
+    // getSong: function (query) {
+    //     return axios.get("/2.0/?method=track.search&track=" + query + "&api_key=bf8d3ec29d790d8fdc71b82b15ad96a3&format=json");
     // },
-
-    // getChart: function (query) {
-    //     return axios.get("https://api.deezer.com/chart/" + query);
-    // },
-
+    
     // Gets all Songs
     getSongs: function () {
         return axios.get("/api/songs");
