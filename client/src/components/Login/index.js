@@ -40,23 +40,6 @@ class Login extends Component {
     };
   }
 
-  // Console Log User Input
-  handleSubmit = e => {
-    e.preventDefault();
-
-    if (formValid(this.state)) {
-      console.log(`
-        --SUBMITTING--
-        First Name: ${this.state.firstName}
-        Last Name: ${this.state.lastName}
-        Email: ${this.state.email}
-        Password: ${this.state.password}
-      `);
-    } else {
-      console.error("FORM INVALID - DISPLAY ERROR MESSAGE");
-    }
-  };
-
   handleChange = e => {
     e.preventDefault();
     const { name, value } = e.target;
