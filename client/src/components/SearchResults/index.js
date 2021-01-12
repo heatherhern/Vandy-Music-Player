@@ -9,7 +9,6 @@ function SearchResults(props) {
                 <thead>
                     <TableHeader />
                 </thead>
-
                 {/* <tbody> */}
                     {/* {props.employees.map((employee) => (
                         <tr key={employee.login.username}>
@@ -24,9 +23,6 @@ function SearchResults(props) {
                         </tr>
                     ))}
                 </tbody> */}
-
-
-
             </table>
         </>
     );
