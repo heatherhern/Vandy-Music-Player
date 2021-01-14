@@ -3,7 +3,7 @@ const router = express.Router();
 const controller = require("../controllers/userAuthcontroller");
 
 router.route("/userAuth")
-    .get(controller.findAll)
+    .get(controller.findOne)
     .post(controller.save)
 
 module.exports = router;
