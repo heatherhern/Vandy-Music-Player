@@ -6,7 +6,8 @@ import Search from "./components/Search";
 import SearchResults from "./components/SearchResults";
 import Nav from "./components/Nav";
 import Dashboard from "./components/Dashboard";
-
+import NotFoundPage from './components/NotFoundPage';
+import { Redirect } from 'react-router';
 
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
             <Search />
             <SearchResults />
           </Route>
+
+          <Route path="/404" component={NotFoundPage} />
+          <Redirect to="/404" />
 
         </Switch>
       </div>
