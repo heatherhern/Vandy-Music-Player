@@ -11,8 +11,8 @@ module.exports = {
             url: "http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=" + req + "&api_key=bf8d3ec29d790d8fdc71b82b15ad96a3&format=json",
         };
 
-        axios.request(options).then(function (response) {
-            console.log(response.data);
+        axios.request(options).then(function (data) {
+            console.log(data);
         }).catch(function (error) {
             console.error(error);
         });
@@ -20,7 +20,7 @@ module.exports = {
 
     // Find All Songs in Database
     findAll: (req, res) => {
-        db.Song
+        db.Playlist
             .find(req.query)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
@@ -28,7 +28,7 @@ module.exports = {
 
     // Save a Song to Database
     save: (req, res) => {
-        db.Song
+        db.Playlist
             .create(req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
@@ -36,7 +36,7 @@ module.exports = {
 
     // Remove a Song From Database
     remove: (req, res) => {
-        db.Song
+        db.Playlist
             .findById({ _id: req.params.id })
             .then(dbModel => dbModel.remove())
             .then(dbModel => res.json(dbModel))

@@ -9,9 +9,13 @@ function Search() {
     const onSubmit = (data) => {
         let searchQuery = data.searchQuery;
         
-        API.getArtist(searchQuery);
-        API.getAlbum(searchQuery);
-        API.getSong(searchQuery);
+        API.getArtist(searchQuery).then(function(data){
+            console.log(data);
+        });
+        
+        console.log(data);
+        // API.getAlbum(searchQuery);
+        // API.getSong(searchQuery);
     }
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
