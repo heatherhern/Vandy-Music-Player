@@ -102,7 +102,7 @@ class Login extends Component {
               )}
             </div>
             <div className="createAccount">
-              <Link to={"/search"}>
+              <Link to={"/dashboard"}>
               <button type="submit">Sign In</button>
               </Link>
               <small>Don't Have an Account?</small>
