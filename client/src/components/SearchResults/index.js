@@ -16,11 +16,16 @@ function SearchResults(props) {
                                     <img src={song.albumArt} alt="No Album Cover Avaliable" />
                                 </td>
                                 <td>
-                                    {song.artist}
+                                    {song.artist} 
                                 </td>
+                                <td>
+                                    {song.song} 
+                                </td>
+                                <td>
                                 <button className="btn btn-primary" type="button" id={song.id} onSubmit={() => props.handleSubmit(song)}>
                                     Save
                                 </button>
+                                </td>
                             </tr>
                     ))}
                 </tbody>

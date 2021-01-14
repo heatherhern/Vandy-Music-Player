@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import CreateAccount from "./components/CreateAccount";
 import Login from "./components/Login";
 import Search from "./components/Search";
-import SearchResults from "./components/SearchResults";
 import Nav from "./components/Nav";
 import Dashboard from "./components/Dashboard";
 
@@ -30,7 +29,6 @@ function App() {
 
           <Route exact path="/search">
             <Search />
-            <SearchResults />
           </Route>
 
         </Switch>
