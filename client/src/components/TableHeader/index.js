@@ -3,7 +3,7 @@ import React from 'react'
 function TableHeader() {
     return (
         <div>
-            <tr class="headerrow">
+            <tr class="headerRow">
                 <th>Song</th>
                 <th>Artist</th>
                 <th>Album</th>
@@ -13,6 +13,6 @@ function TableHeader() {
     )
 }
 
-export default TableHeader
+export default TableHeader;
 
 
