@@ -9,20 +9,21 @@ function SearchResults(props) {
                 <thead>
                     <TableHeader />
                 </thead>
-                {/* <tbody> */}
-                    {/* {props.employees.map((employee) => (
-                        <tr key={employee.login.username}>
-                            <td>
-                                <img src={employee.picture.thumbnail} alt="Profile Pic" />
-                            </td>
-                            <td>
-                                {employee.name.first} {employee.name.last}
-                            </td>
-                            <td>{employee.phone}</td>
-                            <td>{employee.email}</td>
-                        </tr>
+                <tbody>
+                    {props.results.map((song, index) => (
+                            <tr key={index}>
+                                <td>
+                                    <img src={song.albumArt} alt="No Album Cover Avaliable" />
+                                </td>
+                                <td>
+                                    {song.artist}
+                                </td>
+                                <button className="btn btn-primary" type="button" id={song.id} onSubmit={() => props.handleSubmit(song)}>
+                                    Save
+                                </button>
+                            </tr>
                     ))}
-                </tbody> */}
+                </tbody>
             </table>
         </>
     );
@@ -30,3 +31,4 @@ function SearchResults(props) {
 
 
 export default SearchResults;
+
