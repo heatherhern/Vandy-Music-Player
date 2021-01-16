@@ -1,13 +1,12 @@
 import React from "react";
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Carousel from 'react-bootstrap/Carousel'
 
-function Jumbotron({ children }) {
+
+function Jumbo() {
   return (
-    <div
-      style={{ height: 300, clear: "both", paddingTop: 120, textAlign: "center" }}
-      className="jumbotron"
-    >
-      {children}
-    </div>
+    <>
+    </>
   );
 }
 
