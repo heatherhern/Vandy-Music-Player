@@ -16,12 +16,12 @@ function App() {
       <div>
         <Switch>
 
-          <Route exact path={["/", "/createaccount"]}>
-            <CreateAccount />
-          </Route>
-
           <Route exact path="/login">
             <Login />
+          </Route>
+
+          <Route exact path={["/", "/createaccount"]}>
+            <CreateAccount />
           </Route>
 
           <Route exact path="/dashboard">
