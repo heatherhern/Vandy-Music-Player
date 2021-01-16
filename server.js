@@ -12,9 +12,11 @@ app.use(logger("dev"));
 // Use Express
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
 
-// Require Routes
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+}
+
 app.use(require("./routes/playlistRoute"));
 app.use(require("./routes/userAuthRoute"));
 
