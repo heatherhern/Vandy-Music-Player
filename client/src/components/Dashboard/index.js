@@ -1,12 +1,12 @@
-import React from "react";
+import React, { Component } from "react";
+// import Login from "../Login";
 
 
-function Dashboard() {
+function Dashboard(props) {
     return (
         <body>
-            <h1>Hello</h1>
+            <h1>Hello </h1>
         </body>
-       
     );
 }
 
