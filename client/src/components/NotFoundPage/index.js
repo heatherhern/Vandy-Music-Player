@@ -4,12 +4,10 @@ import ErrorImage from '../NotFoundPage/error.png'
 import Button from 'react-bootstrap/Button'
 import "./style.css";
 
-
-
 function NotFoundPage() {
     return (
         <>
-            <img src={ErrorImage} className="image" alt="Logo" />
+            <img src={ErrorImage} className="errorImage" alt="Logo" />
             <p style={{ textAlign: "center" }}>
                 <Link to="/dashboard">
                     <Button variant="outline-primary">Go To Home</Button>
