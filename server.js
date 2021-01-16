@@ -14,6 +14,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+    // Send every other request to the React app
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname, "./client/build/index.html"));
+    });
+}
+
 // Require Routes
 app.use(require("./routes/playlistRoute"));
 app.use(require("./routes/userAuthRoute"));
