@@ -5,7 +5,7 @@ import "./style.css";
 function Nav() {
     return (
         <Navbar className="navigation">
-            <Navbar.Brand href="#home">Vandy Music Player</Navbar.Brand>
+            <Navbar.Brand href="#home">Vandy Music Player <i class="fas fa-music"></i></Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">
                 <Navbar.Text>

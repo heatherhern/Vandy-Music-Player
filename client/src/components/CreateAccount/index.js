@@ -138,7 +138,7 @@ class CreateAccount extends Component {
               )}
             </div>
             <div className="createAccount">
-              <button type="submit">Create Account</button>
+              <button className='create-account-btn' type="submit">Create Account</button>
               <small>Already Have an Account?</small>
             </div>
             <div className="login">

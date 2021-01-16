@@ -101,7 +101,7 @@ class Login extends Component {
                 <span className="errorMessage">{formErrors.password}</span>
               )}
             </div>
-            <div className="createAccount">
+            <div className="signIn">
               <Link to={"/dashboard"}>
               <button type="submit">Sign In</button>
               </Link>
