@@ -1,14 +1,10 @@
 import React from "react";
 import "./style.css";
-import TableHeader from "../TableHeader"
 
 function SearchResults(props) {
     return (
         <>
             <table className="results-container">
-                <thead>
-                    <TableHeader />
-                </thead>
                 <tbody>
                     {props.results.map((song, index) => (
                             <tr key={index}>
@@ -16,10 +12,10 @@ function SearchResults(props) {
                                     <img src={song.albumArt} alt="No Album Cover Avaliable" />
                                 </td>
                                 <td>
-                                    {song.artist} 
+                                    {song.song} 
                                 </td>
                                 <td>
-                                    {song.song} 
+                                    {song.artist} 
                                 </td>
                                 <td>
                                 <button className="btn btn-primary" type="button" id={song.id} onSubmit={() => props.handleSubmit(song)}>
