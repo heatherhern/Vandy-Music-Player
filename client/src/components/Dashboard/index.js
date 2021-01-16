@@ -1,12 +1,14 @@
-import React from "react";
+import React, { Component } from "react";
+// import Login from "../Login";
+import Search from "../Search"
 
 
 function Dashboard() {
     return (
-        <body>
-            <h1>Hello</h1>
-        </body>
-       
+        <>
+        <Search />
+        <h1>Hello </h1>
+        </>
     );
 }
 

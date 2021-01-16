@@ -29,6 +29,15 @@ function Search() {
         // API.getAlbum(searchQuery);
         // API.getSong(searchQuery);
     }
+
+    const handleSavedButton = song => {
+        API.saveSong(song)
+            .then(function(data) {
+                console.log(data)
+            })
+            .catch(err => console.log(err))
+    }
+
     return (
         <>
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -36,7 +45,7 @@ function Search() {
 
             <input type="submit" className="submit-btn" />
         </form>
-        <SearchResults results={results} />
+        <SearchResults results={results} handleSavedButton={handleSavedButton} />
         </>
     );
 }
