@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Logo from '../Login/logo.png'
 import "./style.css";
 
 const emailRegex = RegExp(
@@ -76,10 +77,13 @@ class CreateAccount extends Component {
 
     return (
       <div className="wrapper">
+        
         <div className="form-wrapper">
+        <img src={Logo} className="image" alt="Logo" />
           <div className="headerTitle">
             <h1>Create Account</h1>
           </div>
+          
           <form onSubmit={this.handleSubmit} noValidate>
             <div className="firstName">
               <label htmlFor="firstName">First Name</label>
@@ -138,7 +142,7 @@ class CreateAccount extends Component {
               )}
             </div>
             <div className="createAccount">
-              <button type="submit">Create Account</button>
+              <button className='create-account-btn' type="submit">Create Account</button>
               <small>Already Have an Account?</small>
             </div>
             <div className="login">

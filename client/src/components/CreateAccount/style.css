@@ -153,4 +153,12 @@ light green: #A3C4BC
   .login small:hover {
     color: black;
   }
+
+  .image {
+    height: 200px;
+    width: 200px;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
   
