@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import TableHeader from "../TableHeader"
+import TableHeader from "../TableHeader";
 
 function SearchResults(props) {
     return (
