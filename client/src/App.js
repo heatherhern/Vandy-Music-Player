@@ -27,7 +27,7 @@ function App() {
           <Route exact path="/dashboard">
             <Nav />
             <Dashboard />
-            <Footer />
+            {/* <Footer /> */}
           </Route>
 
           <Route exact path="/search">

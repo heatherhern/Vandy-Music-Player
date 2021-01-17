@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function TableHeader() {
     return (
@@ -10,6 +10,8 @@ function TableHeader() {
                 <th>Year</th>
             </tr>
         </div>
+
+        
     )
 }
 

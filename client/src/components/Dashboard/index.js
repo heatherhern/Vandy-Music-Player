@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import Search from "../Search";
+import CardSet from "../Cards";
+import JumboScreen from "../Jumbotron";
 
 
 function Dashboard() {
     return (
         <>
-            <Search />
+            <JumboScreen />
+            <CardSet />
+            {/* <Search /> */}
         </>
     );
 }
