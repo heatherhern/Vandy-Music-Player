@@ -15,8 +15,8 @@ export default {
     // },
     
     // Gets all Songs
-    getUserSongs: function (userID) {
-        return axios.get("/api/songs/" + userID);
+    getUserSongs: function () {
+        return axios.get("/api/songs");
     },
 
     // Gets a Specific Song 
