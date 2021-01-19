@@ -8,13 +8,13 @@ function JumboScreen() {
   return (
     <>
       <Jumbotron className="jumbotron">
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         <div className="overlay">
           <h2>WELCOME TO THE WORLD OF MUSIC</h2>
         </div>

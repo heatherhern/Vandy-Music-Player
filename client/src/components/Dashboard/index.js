@@ -3,11 +3,9 @@ import React, { Component, useState, useEffect } from "react";
 import Search from "../Search";
 import CardSet from "../Cards";
 import JumboScreen from "../Jumbotron";
-import TableHeader from "../TableHeader";
+import Footer from "../Footer";
 import API from '../../utils/API';
 import CustomizedTables from "../Table";
-
-
 
 function Dashboard() {
     const [playlist, setPlaylist] = useState([]);
@@ -57,6 +55,7 @@ function Dashboard() {
                     ))}
                 </tbody>
             </table>
+            <Footer />
         </>
     );
 }
