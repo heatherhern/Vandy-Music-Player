@@ -23,8 +23,8 @@ function CardSet() {
                     <Card.Body>
                         <Card.Title>The Weeknd</Card.Title>
                         <Card.Text>
-                            This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.
+                            Grammmy Award-winning artist The Weeknd is a Canadian singer, songwriter and record producer with more than 75 million records sold worldwide.
+                            The Weeknd will headline the Super Bowl LV Halftime Show in February 2021. 
                         </Card.Text>
                         <Button variant="info">Learn More <FaRegThumbsUp /></Button>{' '}
                         <Button variant="success">Spotify <FaSpotify /></Button>
@@ -37,8 +37,8 @@ function CardSet() {
                     <Card.Body>
                         <Card.Title>Ariana Grande</Card.Title>
                         <Card.Text>
-                            This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.
+                        Ariana Grande's sixth studio album, Positions (2020), and its title track, debuted at number-one in the UK and US. 
+                        Grande became the first artist to have five number-one debuts on the Hot 100 and the first artist to have their first five number ones debut at the top.
                         </Card.Text>
                         <Button variant="info">Learn More <FaRegThumbsUp /></Button>{' '}
                         <Button variant="success">Spotify <FaSpotify /></Button>
@@ -51,8 +51,8 @@ function CardSet() {
                     <Card.Body>
                         <Card.Title>Billie Eillish</Card.Title>
                         <Card.Text>
-                            This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.
+                        Billie Eilish was 13 when she recorded her first viral hit, “Ocean Eyes,” at home with her brother. 
+                        At 17 she earmed 1 billion streams on Spotify, making her the youngest artist to top 1 billion streams on a project.
                         </Card.Text>
                         <Button variant="info">Learn More <FaRegThumbsUp /></Button>{' '}
                         <Button variant="success">Spotify <FaSpotify /></Button>
@@ -65,8 +65,8 @@ function CardSet() {
                     <Card.Body>
                         <Card.Title>Justin Bieber</Card.Title>
                         <Card.Text>
-                            This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.
+                        Justin Drew Bieber was discovered on YouTube at age 13. Today, 
+                        with sales of over 150 million records, Bieber is one of the world's best-selling music artists. 
                         </Card.Text>
                         <Button variant="info">Learn More <FaRegThumbsUp /></Button>{' '}
                         <Button variant="success">Spotify <FaSpotify /></Button>
@@ -79,8 +79,8 @@ function CardSet() {
                     <Card.Body>
                         <Card.Title>Dua Lipa</Card.Title>
                         <Card.Text>
-                            This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.
+                        Born and raised in London to Kosovar-Albanian parents, Dua Lipa signed to Warner Records in 2015 releasing her self titled debut in 2017 which featured the hit singles, 
+                        'Be The One', 'IDGAF', 'Hotter Than Hell' & her first UK #1 hit 'New Rules'. 
                         </Card.Text>
                         <Button variant="info">Learn More <FaRegThumbsUp /></Button>{' '}
                         <Button variant="success">Spotify <FaSpotify /></Button>
@@ -93,8 +93,8 @@ function CardSet() {
                     <Card.Body>
                         <Card.Title>Post Malone</Card.Title>
                         <Card.Text>
-                            This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.
+                        Austin Richard Post, known professionally as Post Malone, is an American rapper, 
+                        singer, songwriter, and record producer known for his introspective songwriting and unique vocal style.
                         </Card.Text>
                         <Button variant="info">Learn More <FaRegThumbsUp /></Button>{' '}
                         <Button variant="success">Spotify <FaSpotify /></Button>
