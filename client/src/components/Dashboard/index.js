@@ -6,8 +6,6 @@ import JumboScreen from "../Jumbotron";
 import Footer from "../Footer";
 import API from '../../utils/API';
 
-
-
 function Dashboard() {
     const [playlist, setPlaylist] = useState([]);
 
