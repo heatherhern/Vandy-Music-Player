@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import TableHeader from "../TableHeader"
+import TableHeader from "../TableHeader";
 
 function SearchResults(props) {
     return (
@@ -13,6 +13,7 @@ function SearchResults(props) {
                     {props.results.map((song, index) => (
                         <tr key={index}>
                             <td>
+                                {console.log(song.albumArt)}
                                 <img src={song.albumArt} alt="No Album Cover Avaliable" />
                             </td>
                             <td>
