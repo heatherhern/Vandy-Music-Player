@@ -15,12 +15,12 @@ function JumboScreen() {
         
         
         
-        {/* <div className="overlay">
+        <div className="overlay">
           <h2>WELCOME TO THE WORLD OF MUSIC</h2>
         </div>
         <video className="video-background" autoPlay loop muted>
           <source src={BackgroundVideo} type="video/mp4" />
-        </video> */}
+        </video>
 
       </Jumbotron>
     </>
