@@ -5,6 +5,7 @@ import CardSet from "../Cards";
 import JumboScreen from "../Jumbotron";
 import Footer from "../Footer";
 import API from '../../utils/API';
+import CustomizedTables from "../Table";
 
 function Dashboard() {
     const [playlist, setPlaylist] = useState([]);
@@ -30,9 +31,8 @@ function Dashboard() {
         <>
             <JumboScreen />
             <CardSet />
-            {/* <Search /> */}
             <Search />
-            {/* <h1>Hello </h1> */}
+            <CustomizedTables />
             <table className="results-container">
                 <tbody>
                     {playlist.map((song, index) => (
