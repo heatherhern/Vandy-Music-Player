@@ -32,6 +32,7 @@ module.exports = {
     userData: (req, res) => {
         res.send(req.user);
     },
+    
     // Remove a User From Database
     logout: (req, res) => {
         req.logout();

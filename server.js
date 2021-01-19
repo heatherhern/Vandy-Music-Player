@@ -1,15 +1,13 @@
 // Variables
 const express = require("express");
 const logger = require("morgan");
-var session = require('express-session');
-var mongoose = require('mongoose');
-var passport = require('passport')
+var session = require("express-session");
+var mongoose = require("mongoose");
+var passport = require("passport")
 const PORT = process.env.PORT || 3001;
 const db = require("./models");
 const app = express();
 
-
-app.use(logger("dev"));
 
 // Use Express
 app.use(express.urlencoded({ extended: true }));
@@ -17,14 +15,17 @@ app.use(express.json());
 
 // Express Session
 app.use(session({
-    secret: 'secret',
+    secret: "secret",
     saveUninitialized: true,
     resave: true
 }));
 
+app.use(logger("dev"));
+
 // Passport init
 app.use(passport.initialize());
 app.use(passport.session());
+
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));

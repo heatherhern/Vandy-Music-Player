@@ -30,8 +30,8 @@ module.exports.createUser = function (newUser, callback) {
     });
 }
 
-module.exports.getUserByUsername = function (username, callback) {
-    let query = { username: username };
+module.exports.getUserByEmail = function (email, callback) {
+    let query = { email: email };
     User.findOne(query, callback);
 }
 
@@ -48,11 +48,11 @@ module.exports.comparePassword = function (candidatePassword, hash, callback) {
 
 let LocalStrategy = require('passport-local').Strategy;
 passport.use(new LocalStrategy(
-    function (username, password, done) {
-        User.getUserByUsername(username, function (err, user) {
+    function (email, password, done) {
+        User.getUserByEmail(email, function (err, user) {
             if (err) throw err;
             if (!user) {
-                return done(null, false, { message: 'Unknown User' });
+                return done(null, false, { message: 'Unknown Email' });
             }
             User.comparePassword(password, user.password, function (err, isMatch) {
                 if (err) throw err;
