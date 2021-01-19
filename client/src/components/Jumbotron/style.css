@@ -1,6 +1,7 @@
 .jumbotron{
     position: relative;
     z-index:-101;
+    height: 300px;
 }
 
 .video-background { 
@@ -10,7 +11,7 @@
     left: 0;
     overflow: hidden;
     z-index: -100;
-    width:100%;
+    width: 100%;
     height: 100%;
     -o-filter: blur(3px);
     filter: blur(3px);
@@ -22,7 +23,7 @@
 }
 
 .overlay {
-    min-height: 100vh;
+    min-height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
