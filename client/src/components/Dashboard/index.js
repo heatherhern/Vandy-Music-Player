@@ -34,11 +34,8 @@ function Dashboard() {
             <CardSet />
             {/* <Search /> */}
             <Search />
-            <h1>Hello </h1>
+            {/* <h1>Hello </h1> */}
             <table className="results-container">
-                <thead>
-                    <TableHeader />
-                </thead>
                 <tbody>
                     {playlist.map((song, index) => (
                         <tr key={index}>
