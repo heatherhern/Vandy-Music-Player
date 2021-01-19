@@ -7,7 +7,6 @@ function SearchResults(props) {
             <table className="results-container">
                 <tbody>
                     {props.results.map((song, index) => (
-
                         <tr key={index}>
                             <td>
                                 {console.log(song.albumArt)}
@@ -21,7 +20,6 @@ function SearchResults(props) {
                             </td>
                             <td>
                                 <button className="btn btn-primary" type="button" id={song.id} onClick={() => props.handleSavedButton(song)}>
-
                                     Save
                                 </button>
                             </td>

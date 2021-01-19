@@ -22,8 +22,8 @@ function Search() {
                 }
                 return song;
             });
-            // console.log(res);
-            // console.log(data);
+            console.log(res);
+            console.log(data);
             setResultsState(res);
         });
         // API.getAlbum(searchQuery).then(function (data) {
@@ -39,10 +39,7 @@ function Search() {
         // console.log(album);
         }
         // API.getSong(searchQuery);
-
         // )};
-
-    }
 
     const handleSavedButton = song => {
         API.saveSong(song)
@@ -63,5 +60,6 @@ function Search() {
         </>
     );
 }
+
 
 export default Search;
