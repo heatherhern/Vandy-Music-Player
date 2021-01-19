@@ -9,13 +9,6 @@ function SearchResults(props) {
                     {props.results.map((song, index) => (
                         <tr key={index}>
                             <td>
-                                {console.log(song.albumArt)}
-                                <img src={song.albumArt} alt="No Album Cover Avaliable" />
-                            </td>
-                            <td>
-                                {song.artist}
-                            </td>
-                            <td>
                                 {song.song}
                             </td>
                             <td>

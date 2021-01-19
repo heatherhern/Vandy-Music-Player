@@ -17,8 +17,6 @@ function Search() {
             res = data.data.toptracks.track.map(result => {
             const song = {
                     song: result.name,
-                    artist: data.data.toptracks["@attr"].artist,
-                    albumArt: result.image[2]["#text"],
                 }
                 return song;
             });

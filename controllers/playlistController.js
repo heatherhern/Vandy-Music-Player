@@ -20,7 +20,6 @@ module.exports = {
 
     // Find All Songs in Database
     findAll: (req, res) => {
-        console.log(req.user)
         db.Playlist
             .findById({ _id: req.user.id })
             .then(dbModel => res.json(dbModel))
