@@ -2,15 +2,16 @@
 ![]()
 
 ## Overview
-This application allows users to securely log in, search for songs by artist from a dashboard, and then save desired songs to playlists for future reference. 
+This application allows users to search for and save songs into a playlist! 
 
-Here is a link to the deployed webpage: []
+
+Here is a link to the deployed webpage: [https://vast-gorge-60360.herokuapp.com/]
 
 ## Application Features
-1) Login Capability
-2) Search Music Database by Artist
-3) Save Songs to Playlists
-4) Add Multiple Playlists Per User
+1) Create and login to your account 
+2) Search for artists that will bring back their songs
+3) Save songs to your playlist
+4) Remove songs from your playlist
 
 ## Technologies Used
 HTML, CSS, Javascript, React, Node.js, Express.js, MongoDB, Mongoose, JSON, Heroku
