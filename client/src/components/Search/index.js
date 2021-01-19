@@ -22,12 +22,26 @@ function Search() {
                 }
                 return song;
             });
-            console.log(res);
-            console.log(data);
+            // console.log(res);
+            // console.log(data);
             setResultsState(res);
         });
-        // API.getAlbum(searchQuery);
+        // API.getAlbum(searchQuery).then(function (data) {
+        //     let res = [];
+        //     console.log(res);
+
+        //     res = data.data.toptracks.track.map(result => {
+        //     const album = {
+        //         album: result.album,
+        //     }
+        //     return album;
+        // });
+        // console.log(album);
+        }
         // API.getSong(searchQuery);
+
+        // )};
+
     }
 
     const handleSavedButton = song => {
