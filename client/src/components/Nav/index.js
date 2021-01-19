@@ -2,6 +2,7 @@ import React from "react";
 import ReactLogo from './logo.svg';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
+import { FaUserAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import "./style.css";
 
@@ -23,10 +24,10 @@ function Nav() {
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text>
-                        Signed in as: <a href="#login">Mark Otto</a>
+                        Signed in as: <a href="#login">Mark Otto <FaUserAlt /></a>
                     </Navbar.Text>
                 </Navbar.Collapse>
-                
+
                 <div className="signout">
                 <Link to="/login">
                     <Button variant="info">Sign Out</Button>

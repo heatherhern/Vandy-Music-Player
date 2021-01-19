@@ -1,8 +1,11 @@
 import React, { Component, useState, useEffect } from "react";
 // import Login from "../Login";
 import Search from "../Search";
+import CardSet from "../Cards";
+import JumboScreen from "../Jumbotron";
 import TableHeader from "../TableHeader";
 import API from '../../utils/API';
+
 
 
 function Dashboard() {
@@ -27,6 +30,9 @@ function Dashboard() {
 
     return (
         <>
+            <JumboScreen />
+            <CardSet />
+            {/* <Search /> */}
             <Search />
             <h1>Hello </h1>
             <table className="results-container">
