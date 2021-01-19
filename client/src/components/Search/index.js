@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import { useForm } from "react-hook-form";
 import "./style.css";
 import SearchResults from "../SearchResults";
+import Button from 'react-bootstrap/Button';
 import API from '../../utils/API';
 
 function Search() {
@@ -41,8 +42,8 @@ function Search() {
         <>
         <form onSubmit={handleSubmit(onSubmit)}>
             <input type="text" name="searchQuery" className="searchQuery" placeholder="Search by Artist" ref={register} />
-
-            <input type="submit" className="submit-btn" />
+            <Button variant="primary" className="submit-btn">Submit</Button>
+            {/* <input type="submit" className="submit-btn" /> */}
         </form>
         <SearchResults results={results} handleSavedButton={handleSavedButton} />
         </>
