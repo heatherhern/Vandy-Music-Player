@@ -15,7 +15,6 @@ module.exports = {
 
     // Save a User to Database
     register: (req, res) => {
-
         let newUser = new db.User({
             name: req.body.name,
             email: req.body.email,

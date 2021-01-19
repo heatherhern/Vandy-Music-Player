@@ -1,9 +1,9 @@
-var mongoose = require('mongoose');
-var bcrypt = require('bcryptjs');
-var passport = require("passport");
+let mongoose = require('mongoose');
+let bcrypt = require('bcryptjs');
+let passport = require("passport");
 
 // User Schema
-var UserSchema = mongoose.Schema({
+let UserSchema = mongoose.Schema({
     username: {
         type: String,
         index: true
@@ -19,7 +19,7 @@ var UserSchema = mongoose.Schema({
     }
 });
 
-var User = module.exports = mongoose.model('User', UserSchema);
+let User = module.exports = mongoose.model('User', UserSchema);
 
 module.exports.createUser = function (newUser, callback) {
     bcrypt.genSalt(10, function (err, salt) {
@@ -31,7 +31,7 @@ module.exports.createUser = function (newUser, callback) {
 }
 
 module.exports.getUserByUsername = function (username, callback) {
-    var query = { username: username };
+    let query = { username: username };
     User.findOne(query, callback);
 }
 
@@ -46,7 +46,7 @@ module.exports.comparePassword = function (candidatePassword, hash, callback) {
     });
 }
 
-var LocalStrategy = require('passport-local').Strategy;
+let LocalStrategy = require('passport-local').Strategy;
 passport.use(new LocalStrategy(
     function (username, password, done) {
         User.getUserByUsername(username, function (err, user) {
