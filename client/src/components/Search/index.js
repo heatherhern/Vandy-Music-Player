@@ -25,21 +25,8 @@ function Search() {
             console.log(res);
             console.log(data);
             setResultsState(res);
-        });
-        // API.getAlbum(searchQuery).then(function (data) {
-        //     let res = [];
-        //     console.log(res);
-
-        //     res = data.data.toptracks.track.map(result => {
-        //     const album = {
-        //         album: result.album,
-        //     }
-        //     return album;
-        // });
-        // console.log(album);
-        }
-        // API.getSong(searchQuery);
-        // )};
+        });  
+    }
 
     const handleSavedButton = song => {
         API.saveSong(song)
