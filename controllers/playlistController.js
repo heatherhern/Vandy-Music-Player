@@ -22,7 +22,7 @@ module.exports = {
     findAll: (req, res) => {
         console.log(req.user)
         db.Playlist
-            .find({ _id: req.user.id })
+            .findById({ _id: req.user.id })
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
     },

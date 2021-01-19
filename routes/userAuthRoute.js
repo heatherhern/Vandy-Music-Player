@@ -6,7 +6,7 @@ router.route("/signup")
     .post(controller.register)
 
 router.route("/login")
-    .post(controller.register)
+    .post(controller.login)
 
 router.route("/user_data")
     .get(controller.userData)
