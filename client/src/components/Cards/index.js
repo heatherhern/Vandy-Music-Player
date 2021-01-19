@@ -37,8 +37,8 @@ function CardSet() {
                     <Card.Body>
                         <Card.Title>Ariana Grande</Card.Title>
                         <Card.Text>
-                        Ariana Grande's sixth studio album, Positions (2020), and its title track, debuted at number-one in the UK and US. 
-                        Grande became the first artist to have five number-one debuts on the Hot 100 and the first artist to have their first five number ones debut at the top.
+                        Ariana Grande's sixth studio album, Positions (2020), debuted at number-one in the UK and US. 
+                        Grande became the first artist to have five number-one debuts on the Hot 100 and to have their first five number ones debut at the top.
                         </Card.Text>
                         <Button variant="info">Learn More <FaRegThumbsUp /></Button>{' '}
                         <Button variant="success">Spotify <FaSpotify /></Button>
@@ -65,8 +65,8 @@ function CardSet() {
                     <Card.Body>
                         <Card.Title>Justin Bieber</Card.Title>
                         <Card.Text>
-                        Justin Drew Bieber was discovered on YouTube at age 13. Today, 
-                        with sales of over 150 million records, Bieber is one of the world's best-selling music artists. 
+                        Justin Drew Bieber was discovered by Record Exec Scooter Braun on YouTube at age 13. Today, 
+                        with five hit albums and sales of over 150 million records, Justin Bieber is one of the world's best-selling music artists. 
                         </Card.Text>
                         <Button variant="info">Learn More <FaRegThumbsUp /></Button>{' '}
                         <Button variant="success">Spotify <FaSpotify /></Button>
@@ -79,8 +79,8 @@ function CardSet() {
                     <Card.Body>
                         <Card.Title>Dua Lipa</Card.Title>
                         <Card.Text>
-                        Born and raised in London to Kosovar-Albanian parents, Dua Lipa signed to Warner Records in 2015 releasing her self titled debut in 2017 which featured the hit singles, 
-                        'Be The One', 'IDGAF', 'Hotter Than Hell' & her first UK #1 hit 'New Rules'. 
+                        Born and raised in London to Kosovar-Albanian parents, Dua Lipa signed to Warner Records in 2015. She released her self-titled debut in 2017 which featured the hit singles, 
+                        'IDGAF' and her first UK #1 hit 'New Rules'. 
                         </Card.Text>
                         <Button variant="info">Learn More <FaRegThumbsUp /></Button>{' '}
                         <Button variant="success">Spotify <FaSpotify /></Button>
@@ -94,7 +94,7 @@ function CardSet() {
                         <Card.Title>Post Malone</Card.Title>
                         <Card.Text>
                         Austin Richard Post, known professionally as Post Malone, is an American rapper, 
-                        singer, songwriter, and record producer known for his introspective songwriting and unique vocal style.
+                        singer, songwriter, and record producer known for his introspective songwriting and unique vocal style in a range of styles.
                         </Card.Text>
                         <Button variant="info">Learn More <FaRegThumbsUp /></Button>{' '}
                         <Button variant="success">Spotify <FaSpotify /></Button>
