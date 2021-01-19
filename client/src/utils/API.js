@@ -3,7 +3,7 @@ require('dotenv').config();
 
 export default {
     getArtist: function (query) {
-        return axios.get("http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=" + query + "&api_key=bf8d3ec29d790d8fdc71b82b15ad96a3&format=json");
+        return axios.get("http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=" + query + "&limit=10&api_key=bf8d3ec29d790d8fdc71b82b15ad96a3&format=json");
     },
 
     getAlbum: function (query) {
