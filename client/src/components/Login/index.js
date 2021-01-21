@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Axios from "axios";
 import "./style.css";
 
 const emailRegex = RegExp(
@@ -27,10 +28,11 @@ class Login extends Component {
     super(props);
 
     this.state = {
-      firstName: null,
-      lastName: null,
-      email: null,
-      password: null,
+      firstName: "",
+      lastName: "",
+      username: "",
+      password: "",
+      loggedIn: false,
       formErrors: {
         firstName: "",
         lastName: "",
@@ -39,6 +41,18 @@ class Login extends Component {
       }
     };
   }
+
+  login = (event) => {
+    event.preventDefault();
+    Axios.post("/login", {
+        username: this.state.username,
+        password: this.state.password,
+    }).then((res) => {
+        this.setState({ loggedIn: true })
+    }).catch((err) => {
+        console.log(err)
+    })
+}
 
   handleChange = e => {
     e.preventDefault();
@@ -103,7 +117,7 @@ class Login extends Component {
             </div>
             <div className="signIn">
               <Link to={"/dashboard"}>
-                <button type="submit">Sign In</button>
+                <button type="submit" onClick={this.login}>Sign In</button>
               </Link>
               <small>Don't Have an Account?</small>
             </div>
