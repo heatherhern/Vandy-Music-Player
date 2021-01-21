@@ -28,12 +28,12 @@ module.exports = {
         });
     },
 
-    // Remove a User From Database
+    // Send User Data From Database
     userData: (req, res) => {
         res.send(req.user);
     },
     
-    // Remove a User From Database
+    // Logout a User From Database
     logout: (req, res) => {
         req.logout();
         res.send(null)
