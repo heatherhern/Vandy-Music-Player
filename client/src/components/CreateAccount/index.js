@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Router } from "react-router-dom";
 import Axios from "axios";
 import "./style.css";
 
@@ -44,17 +44,17 @@ class CreateAccount extends Component {
 
   signup = (event) => {
     event.preventDefault();
-      Axios.post("/signup", {
-        firstName: this.state.firstName,
-        lastName: this.state.lastName,
-        email: this.state.email,
-        password: this.state.password,
-      }).then((res) => {
-        this.setState({ signedUp: true })
-      }).catch((err) => {
-        console.log(err)
-      })
-    }
+    Axios.post("/signup", {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      email: this.state.email,
+      password: this.state.password,
+    }).then((res) => {
+      this.setState({ signedUp: true })
+    }).catch((err) => {
+      console.log(err)
+    })
+  }
 
   handleChange = e => {
     e.preventDefault();
@@ -83,7 +83,6 @@ class CreateAccount extends Component {
       default:
         break;
     }
-
     this.setState({ formErrors, [name]: value }, () => console.log(this.state));
   };
 
@@ -92,12 +91,10 @@ class CreateAccount extends Component {
 
     return (
       <div className="wrapper">
-
         <div className="form-wrapper">
           <div className="headerTitle">
             <h1>Create Account</h1>
           </div>
-
           <form onSubmit={this.handleSubmit} noValidate>
             <div className="firstName">
               <label htmlFor="firstName">First Name</label>

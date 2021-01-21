@@ -1,25 +1,21 @@
 const db = require("../models");
 require('dotenv').config()
-const passport = require("passport");
 
 
 module.exports = {
 
     // Find a User in Database
     login: (req, res) => {
-        passport.authenticate('local'),
-            function (req, res) {
-                res.send(req.user);
-            }
+        res.send(req.user);
     },
 
     // Save a User to Database
     register: (req, res) => {
         let newUser = new db.User({
-            name: req.body.name,
-            email: req.body.email,
             username: req.body.username,
-            password: req.body.password
+            password: req.body.password,
+            email: req.body.email,
+            name: req.body.name
         });
 
         db.User.createUser(newUser, function (err, user) {
@@ -32,10 +28,26 @@ module.exports = {
     userData: (req, res) => {
         res.send(req.user);
     },
-    
+
     // Logout a User From Database
     logout: (req, res) => {
         req.logout();
         res.send(null)
-    }
+    },
+
+    // Save a Song to Database
+    save: (req, res) => {
+        db.User
+            .create(req.body)
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err))
+    },
+
+    // Find All Songs in Database
+    findAll: (req, res) => {
+        db.User
+            .find({ _id: req.params.id })
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err))
+    },
 };
