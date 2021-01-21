@@ -21,12 +21,6 @@ function Dashboard() {
 
     useEffect(getSongs, []);
 
-    const handleDeleteButton = id => {
-        API.deleteSong(id)
-            .then(res => getSongs)
-            .catch(err => console.log(err));
-    };
-
     return (
         <>
             <JumboScreen />
@@ -38,18 +32,7 @@ function Dashboard() {
                     {playlist.map((song, index) => (
                         <tr key={index}>
                             <td>
-                                <img src={song.albumArt} alt="No Album Cover Avaliable" />
-                            </td>
-                            <td>
-                                {song.artist}
-                            </td>
-                            <td>
-                                {song.song}
-                            </td>
-                            <td>
-                                <button className="btn btn-danger" type="button" id={song._id} onClick={() => handleDeleteButton(song._id)}>
-                                    Delete
-                                </button>
+                                {song.songName}
                             </td>
                         </tr>
                     ))}

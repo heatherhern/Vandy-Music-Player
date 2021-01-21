@@ -29,7 +29,7 @@ function Search() {
             console.log(data);
             setResultsState(res);
         });  
-    }
+    };
 
     function handleInputChange(event) {
         event.preventDefault();
@@ -40,11 +40,10 @@ function Search() {
     const handleSavedButton = song => {
         API.saveSong(song)
             .then(function(data) {
-                
                 console.log(data)
             })
             .catch(err => console.log(err));
-    }
+    };
 
     return (
         <>
