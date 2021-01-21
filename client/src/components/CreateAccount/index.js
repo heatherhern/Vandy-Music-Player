@@ -92,7 +92,6 @@ class CreateAccount extends Component {
 
     return (
       <div className="wrapper">
-
         <div className="form-wrapper">
           <div className="headerTitle">
             <h1>Create Account</h1>
