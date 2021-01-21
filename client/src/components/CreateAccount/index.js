@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Axios from "axios";
 import "./style.css";
 
 const emailRegex = RegExp(
@@ -27,10 +28,11 @@ class CreateAccount extends Component {
     super(props);
 
     this.state = {
-      firstName: null,
-      lastName: null,
-      email: null,
-      password: null,
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      signedUp: false,
       formErrors: {
         firstName: "",
         lastName: "",
@@ -39,6 +41,20 @@ class CreateAccount extends Component {
       }
     };
   }
+
+  signup = (event) => {
+    event.preventDefault();
+      Axios.post("/signup", {
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        email: this.state.email,
+        password: this.state.password,
+      }).then((res) => {
+        this.setState({ signedUp: true })
+      }).catch((err) => {
+        console.log(err)
+      })
+    }
 
   handleChange = e => {
     e.preventDefault();
@@ -76,12 +92,12 @@ class CreateAccount extends Component {
 
     return (
       <div className="wrapper">
-        
+
         <div className="form-wrapper">
           <div className="headerTitle">
             <h1>Create Account</h1>
           </div>
-          
+
           <form onSubmit={this.handleSubmit} noValidate>
             <div className="firstName">
               <label htmlFor="firstName">First Name</label>
@@ -140,7 +156,7 @@ class CreateAccount extends Component {
               )}
             </div>
             <div className="createAccount">
-              <button className='create-account-btn' type="submit">Create Account</button>
+              <button className='create-account-btn' type="submit" onClick={this.signup}>Create Account</button>
               <small>Already Have an Account?</small>
             </div>
             <div className="login">
