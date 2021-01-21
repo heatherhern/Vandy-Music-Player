@@ -3,7 +3,6 @@ let bcrypt = require('bcryptjs');
 
 // User Schema
 let UserSchema = mongoose.Schema({
-    playlist: [],
     firstName: {
         type: String
     },
@@ -16,6 +15,7 @@ let UserSchema = mongoose.Schema({
     password: {
         type: String
     },
+    playlist: [],
 });
 
 let User = module.exports = mongoose.model('User', UserSchema);

@@ -12,10 +12,10 @@ module.exports = {
     // Save a User to Database
     register: (req, res) => {
         let newUser = new db.User({
-            username: req.body.username,
-            password: req.body.password,
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
             email: req.body.email,
-            name: req.body.name
+            password: req.body.password
         });
 
         db.User.createUser(newUser, function (err, user) {

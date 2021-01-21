@@ -20,7 +20,6 @@ const formValid = ({ formErrors, ...rest }) => {
   Object.values(rest).forEach(val => {
     val === null && (valid = false);
   });
-
   return valid;
 };
 
