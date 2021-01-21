@@ -6,7 +6,7 @@ import { FaUserAlt, FaHome } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import "./style.css";
 
-function Nav() {
+function Nav(props) {
     return (
         <>
             <Navbar bg="dark" variant="dark" sticky="top">
@@ -19,7 +19,7 @@ function Nav() {
                 <InputSlider />
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text>
-                        Signed in as: <a href="#login">Mark Otto <FaUserAlt /></a>
+                        Signed in as: <a href="#login">{props.firstName}<FaUserAlt /></a>
                     </Navbar.Text>
                 </Navbar.Collapse>
 
