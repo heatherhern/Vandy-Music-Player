@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Axios from "axios";
+import ProfileLogo from "./createuser.png";
+
 import "./style.css";
 
 const emailRegex = RegExp(
@@ -44,17 +46,17 @@ class CreateAccount extends Component {
 
   signup = (event) => {
     event.preventDefault();
-      Axios.post("/signup", {
-        firstName: this.state.firstName,
-        lastName: this.state.lastName,
-        email: this.state.email,
-        password: this.state.password,
-      }).then((res) => {
-        this.setState({ signedUp: true })
-      }).catch((err) => {
-        console.log(err)
-      })
-    }
+    Axios.post("/signup", {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      email: this.state.email,
+      password: this.state.password,
+    }).then((res) => {
+      this.setState({ signedUp: true })
+    }).catch((err) => {
+      console.log(err)
+    })
+  }
 
   handleChange = e => {
     e.preventDefault();
@@ -91,11 +93,13 @@ class CreateAccount extends Component {
     const { formErrors } = this.state;
 
     return (
-      <div className="wrapper">
-        <div className="form-wrapper">
-          <div className="headerTitle">
-            <h1>Create Account</h1>
-          </div>
+      <>
+        <div className="wrapper">
+          <div className="form-wrapper">
+            <div className="headerTitle">
+              <h1>Create Account</h1>
+            </div>
+            <img src={ProfileLogo} style={{ width: 200, height: 200, position: 'center' }} />
 
           <form onSubmit={this.handleSubmit} noValidate>
             <div className="firstName">
@@ -165,7 +169,8 @@ class CreateAccount extends Component {
             </div>
           </form>
         </div>
-      </div>
+        </div>
+      </>
     );
   }
 }
