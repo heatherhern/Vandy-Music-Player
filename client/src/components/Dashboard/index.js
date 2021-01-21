@@ -7,6 +7,7 @@ import API from '../../utils/API';
 import CustomizedTables from "../Table";
 import RecentSongs from "../RecentlyPlayed";
 
+
 function Dashboard() {
     const [playlist, setPlaylist] = useState([]);
 
@@ -24,9 +25,9 @@ function Dashboard() {
     return (
         <>
             <JumboScreen />
-            <CardSet />
+            <RecentSongs /><br/>
             <Search />
-            <CustomizedTables/><br/>
+            <CustomizedTables/><br/><br/>
             <table className="results-container">
                 <tbody>
                     {playlist.map((song, index) => (
@@ -38,7 +39,7 @@ function Dashboard() {
                     ))}
                 </tbody>
             </table>
-            <RecentSongs />
+            <CardSet />
             <Footer />
         </>
     );
