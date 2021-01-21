@@ -1,22 +1,21 @@
 let mongoose = require('mongoose');
 let bcrypt = require('bcryptjs');
-let passport = require("passport");
 
 // User Schema
 let UserSchema = mongoose.Schema({
-    username: {
-        type: String,
-        index: true
+    firstName: {
+        type: String
     },
-    password: {
+    lastName: {
         type: String
     },
     email: {
         type: String
     },
-    name: {
+    password: {
         type: String
-    }
+    },
+    playlist: [],
 });
 
 let User = module.exports = mongoose.model('User', UserSchema);
@@ -46,33 +45,4 @@ module.exports.comparePassword = function (candidatePassword, hash, callback) {
     });
 }
 
-let LocalStrategy = require('passport-local').Strategy;
-passport.use(new LocalStrategy(
-    function (email, password, done) {
-        User.getUserByEmail(email, function (err, user) {
-            if (err) throw err;
-            if (!user) {
-                return done(null, false, { message: 'Unknown Email' });
-            }
-            User.comparePassword(password, user.password, function (err, isMatch) {
-                if (err) throw err;
-                if (isMatch) {
-                    return done(null, user);
-                } else {
-                    return done(null, false, { message: 'Invalid password' });
-                }
-            });
-        });
-    }
-));
-
-passport.serializeUser(function (user, done) {
-    done(null, user.id);
-});
-
-passport.deserializeUser(function (id, done) {
-    User.getUserById(id, function (err, user) {
-        done(err, user);
-    });
-});
 
