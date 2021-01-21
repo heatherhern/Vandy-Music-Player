@@ -5,14 +5,6 @@ export default {
     getArtist: function (query) {
         return axios.get("http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=" + query + "&limit=10&api_key=bf8d3ec29d790d8fdc71b82b15ad96a3&format=json");
     },
-
-    getAlbum: function (query) {
-        return axios.get("/2.0/?method=album.search&album=" + query + "&api_key=bf8d3ec29d790d8fdc71b82b15ad96a3&format=json");
-    },
-    
-    // getSong: function (query) {
-    //     return axios.get("/2.0/?method=track.search&track=" + query + "&api_key=bf8d3ec29d790d8fdc71b82b15ad96a3&format=json");
-    // },
     
     // Gets all Songs
     getUserSongs: function () {

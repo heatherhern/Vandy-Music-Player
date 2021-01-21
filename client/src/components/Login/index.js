@@ -20,7 +20,6 @@ const formValid = ({ formErrors, ...rest }) => {
   Object.values(rest).forEach(val => {
     val === null && (valid = false);
   });
-
   return valid;
 };
 
@@ -29,14 +28,10 @@ class Login extends Component {
     super(props);
 
     this.state = {
-      firstName: "",
-      lastName: "",
-      username: "",
+      email: "",
       password: "",
       loggedIn: false,
       formErrors: {
-        firstName: "",
-        lastName: "",
         email: "",
         password: ""
       }
@@ -46,10 +41,11 @@ class Login extends Component {
   login = (event) => {
     event.preventDefault();
     Axios.post("/login", {
-        username: this.state.username,
+        email: this.state.email,
         password: this.state.password,
     }).then((res) => {
         this.setState({ loggedIn: true })
+        window.location.href= "/dashboard";
     }).catch((err) => {
         console.log(err)
     })

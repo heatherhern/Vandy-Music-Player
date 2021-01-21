@@ -1,9 +1,9 @@
 // Variables
 const express = require("express");
 const logger = require("morgan");
-var session = require("express-session");
-var mongoose = require("mongoose");
-var passport = require("passport")
+const session = require("express-session");
+const mongoose = require("mongoose");
+const passport = require("./config/passport");
 const PORT = process.env.PORT || 3001;
 const db = require("./models");
 const app = express();
