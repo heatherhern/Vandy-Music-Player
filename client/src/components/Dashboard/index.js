@@ -1,11 +1,11 @@
 import React, { Component, useState, useEffect } from "react";
-// import Login from "../Login";
 import Search from "../Search";
 import CardSet from "../Cards";
 import JumboScreen from "../Jumbotron";
 import Footer from "../Footer";
 import API from '../../utils/API';
 import CustomizedTables from "../Table";
+import RecentSongs from "../RecentlyPlayed";
 
 function Dashboard() {
     const [playlist, setPlaylist] = useState([]);
@@ -32,7 +32,7 @@ function Dashboard() {
             <JumboScreen />
             <CardSet />
             <Search />
-            <CustomizedTables/>
+            <CustomizedTables/><br/>
             <table className="results-container">
                 <tbody>
                     {playlist.map((song, index) => (
@@ -55,6 +55,7 @@ function Dashboard() {
                     ))}
                 </tbody>
             </table>
+            <RecentSongs />
             <Footer />
         </>
     );
