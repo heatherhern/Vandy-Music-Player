@@ -98,8 +98,7 @@ class CreateAccount extends Component {
             <div className="headerTitle">
               <h1>Create Account</h1>
             </div>
-            <img src={ProfileLogo} style={{ width: 200, height: 200, position: 'center' }} />
-            
+            <img src={ProfileLogo} style={{ width: 200, height: 200, position: 'center' }} /><br/>            
           <form onSubmit={this.handleSubmit} noValidate>
             <div className="firstName">
               <label htmlFor="firstName">First Name</label>
