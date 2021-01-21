@@ -32,7 +32,7 @@ function Dashboard() {
             <JumboScreen />
             <CardSet />
             <Search />
-            <CustomizedTables />
+            <CustomizedTables/>
             <table className="results-container">
                 <tbody>
                     {playlist.map((song, index) => (

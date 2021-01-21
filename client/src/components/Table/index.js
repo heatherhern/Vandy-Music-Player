@@ -52,11 +52,11 @@ export default function CustomizedTables() {
       <Table className={classes.table} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Song: </StyledTableCell>
-            <StyledTableCell align="right">Artist: </StyledTableCell>
-            <StyledTableCell align="right">Album: </StyledTableCell>
-            <StyledTableCell align="right">Year: </StyledTableCell>
-            <StyledTableCell align="right">Genre: </StyledTableCell>
+            <StyledTableCell>Track:</StyledTableCell>
+            <StyledTableCell align="right">Artist:</StyledTableCell>
+            <StyledTableCell align="right">Album:</StyledTableCell>
+            <StyledTableCell align="right">Year:</StyledTableCell>
+            <StyledTableCell align="right">Genre:</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
