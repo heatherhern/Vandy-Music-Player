@@ -1,8 +1,7 @@
 import React from "react";
-import ReactLogo from './logo.svg';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
-import { FaUserAlt } from "react-icons/fa";
+import { FaUserAlt, FaHome } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import "./style.css";
 
@@ -10,14 +9,8 @@ function Nav() {
     return (
         <>
             <Navbar bg="dark" variant="dark" sticky="top">
-                <Navbar.Brand href="#home">
-                    <img
-                        alt="react logo"
-                        src={ReactLogo}
-                        width="30"
-                        height="30"
-                        className="d-inline-block align-top"
-                    />{' '}
+                <Navbar.Brand href="/dashboard">
+                    <FaHome /> {' '}
                     Vandy Music Player
                 </Navbar.Brand>
 

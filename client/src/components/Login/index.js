@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Axios from "axios";
+import ProfileLogo from "../Login/profile.png";
 import "./style.css";
 
 const emailRegex = RegExp(
@@ -82,6 +83,9 @@ class Login extends Component {
         <div className="form-wrapper">
           <div className="headerTitle">
             <h1>Login</h1>
+            <div>
+            <img src={ProfileLogo} style={{width: 200, height: 200, position: 'center'}}/>
+            </div>
           </div>
           <form onSubmit={this.handleSubmit} noValidate>
             <div className="email">

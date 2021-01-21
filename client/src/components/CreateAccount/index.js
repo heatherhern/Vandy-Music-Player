@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link, Router } from "react-router-dom";
 import Axios from "axios";
+import ProfileLogo from "./createuser.png";
+
 import "./style.css";
 
 const emailRegex = RegExp(
@@ -90,11 +92,14 @@ class CreateAccount extends Component {
     const { formErrors } = this.state;
 
     return (
-      <div className="wrapper">
-        <div className="form-wrapper">
-          <div className="headerTitle">
-            <h1>Create Account</h1>
-          </div>
+      <>
+        <div className="wrapper">
+          <div className="form-wrapper">
+            <div className="headerTitle">
+              <h1>Create Account</h1>
+            </div>
+            <img src={ProfileLogo} style={{ width: 200, height: 200, position: 'center' }} />
+
           <form onSubmit={this.handleSubmit} noValidate>
             <div className="firstName">
               <label htmlFor="firstName">First Name</label>
@@ -163,7 +168,8 @@ class CreateAccount extends Component {
             </div>
           </form>
         </div>
-      </div>
+        </div>
+      </>
     );
   }
 }
