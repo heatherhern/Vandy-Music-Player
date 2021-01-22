@@ -15,7 +15,8 @@ module.exports = {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             email: req.body.email,
-            password: req.body.password
+            password: req.body.password,
+            playlist: []
         });
 
         db.User.createUser(newUser, function (err, user) {
@@ -38,7 +39,8 @@ module.exports = {
     // Save a Song to Database
     save: (req, res) => {
         db.User
-            .create(req.body)
+            .find({ _id: req.params.id })
+            .then(({}) => db.User.findOneAndUpdate({}, { $push: { playlist: req.body } }, { new: true }))
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
     },

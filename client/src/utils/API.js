@@ -20,11 +20,6 @@ export default {
     saveSong: function (savedSongs) {
         return axios.post("/api/songs", savedSongs);
     },
-
-    // Deletes a Song
-    deleteSong: function (id) {
-        return axios.delete("/api/songs/" + id);
-    },
 };
 
 
