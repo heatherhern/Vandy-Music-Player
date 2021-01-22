@@ -27,11 +27,11 @@ function Dashboard() {
         <>
             <JumboScreen />
             <SectionHeader sectionTitle="RECENTLY PLAYED" />
-            <RecentSongs /><br/>
+            <RecentSongs />
             <SectionHeader sectionTitle="SEARCH BY ARTIST" />
             <Search />
             <SectionHeader sectionTitle="PLAYLISTS" />
-            <CustomizedTables/><br/><br/>
+            <CustomizedTables/>
             <table className="results-container">
                 <tbody>
                     {playlist.map((song, index) => (
