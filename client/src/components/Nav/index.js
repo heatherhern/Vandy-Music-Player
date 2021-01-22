@@ -11,14 +11,15 @@ function Nav(props) {
         <>
             <Navbar bg="dark" variant="dark" sticky="top">
                 <Navbar.Brand href="/dashboard" id="webtitle">
-                    <FaHome /> {' '}
-                    Vandy Music Player
+                    <FaHome className="brandName"/> {' '}
+                    VANDY MUSIC PLAYER
                 </Navbar.Brand>
                 <Navbar.Toggle />
                 <InputSlider />
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text>
-                        Signed in as: <a href="#login">{props.firstName}<FaUserAlt /></a>
+                        Signed in 
+                        {/* as: <a href="#login">{props.firstName}<FaUserAlt /></a> */}
                     </Navbar.Text>
                 </Navbar.Collapse>
 
