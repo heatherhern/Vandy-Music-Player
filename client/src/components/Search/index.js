@@ -49,7 +49,7 @@ function Search() {
         <>
         <form>
             <input type="text" name="songName" className="searchQuery" value={songs.songName} placeholder="Search by Artist" onChange={handleInputChange}/>
-            <Button variant="primary" className="submit-btn" onClick={onSubmit}>Submit</Button>
+            <Button variant="primary" className="submit-btn" onClick={onSubmit}>Search</Button>
         </form>
         <SearchResults results={results} handleSavedButton={handleSavedButton} />
         </>
