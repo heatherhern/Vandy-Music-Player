@@ -39,17 +39,20 @@ class Login extends Component {
   }
 
   login = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
+    // removed this and got the screen redirect working //
+
     Axios.post("/login", {
-        email: this.state.email,
-        password: this.state.password,
+      email: this.state.email,
+      password: this.state.password,
     }).then((res) => {
-        this.setState({ loggedIn: true })
-        window.location.href= "/dashboard";
+      console.log(this.email);
+      this.setState({ loggedIn: true })
+      window.location.href = "/dashboard";
     }).catch((err) => {
-        console.log(err)
+      console.log(err)
     })
-}
+  }
 
   handleChange = e => {
     e.preventDefault();
@@ -83,10 +86,12 @@ class Login extends Component {
           <div className="headerTitle">
             <h1>Login</h1>
             <div>
-            <img src={ProfileLogo} style={{width: 200, height: 200, position: 'center'}}/>
+              <img src={ProfileLogo} style={{ width: 200, height: 200, position: 'center' }} />
             </div>
           </div>
-          <form onSubmit={this.handleSubmit} noValidate>
+          <form >
+            {/* removed this from the form line 89. no handlesubmit function?  */}
+            {/* onSubmit={this.handleSubmit} noValidate */}
             <div className="email">
               <label htmlFor="email">Email</label>
               <input
@@ -101,6 +106,7 @@ class Login extends Component {
                 <span className="errorMessage">{formErrors.email}</span>
               )}
             </div>
+
             <div className="password">
               <label htmlFor="password">Password</label>
               <input
@@ -115,6 +121,7 @@ class Login extends Component {
                 <span className="errorMessage">{formErrors.password}</span>
               )}
             </div>
+
             <div className="signIn">
               <Link to={"/dashboard"}>
                 <button type="submit" onClick={this.login}>Sign In</button>
@@ -125,6 +132,7 @@ class Login extends Component {
               <Link to={"/createaccount"}>
                 <small>Sign Up</small>
               </Link>
+
             </div>
           </form>
         </div>

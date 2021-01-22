@@ -5,7 +5,6 @@ import Login from "./components/Login";
 import Search from "./components/Search";
 import Nav from "./components/Nav";
 import Dashboard from "./components/Dashboard";
-import Footer from "./components/Footer";
 import NotFoundPage from './components/NotFoundPage';
 import { Redirect } from 'react-router';
 
@@ -27,7 +26,6 @@ function App() {
           <Route exact path="/dashboard">
             <Nav />
             <Dashboard />
-            {/* <Footer /> */}
           </Route>
 
           <Route exact path="/search">
