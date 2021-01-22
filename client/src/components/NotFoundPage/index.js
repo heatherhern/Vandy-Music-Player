@@ -9,7 +9,7 @@ function NotFoundPage() {
         <>
             <img src={ErrorImage} className="errorImage" alt="Logo" />
             <p style={{ textAlign: "center" }}>
-                <Link to="/dashboard">
+                <Link to="/login">
                     <Button variant="outline-primary">Go To Home</Button>
                 </Link>
             </p>

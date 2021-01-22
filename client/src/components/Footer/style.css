@@ -19,5 +19,13 @@
     text-align: center;
 }
 
+#newsletter {
+    margin: 10px;
+}
+
+#line {
+    background: white;
+}
+
 
 @media screen and (max-width: 768px) {}

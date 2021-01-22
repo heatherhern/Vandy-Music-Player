@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaYoutube, FaSpotify, FaTwitter } from "react-icons/fa";
+import { FaYoutube, FaSpotify, FaTwitter, FaUserCircle, FaCog, FaLock, FaHandsHelping, FaBookReader } from "react-icons/fa";
+import Button from 'react-bootstrap/Button';
 import "./style.css";
 
 function Footer() {
@@ -7,7 +8,8 @@ function Footer() {
       <div className="main-footer">
         <div className="container">
           <div className="row">
-            {/* Column1 */}
+
+            {/* Column 1 */}
             <div className="col">
               <h4 style={{textDecorationLine: 'underline'}}>Socials</h4>
               <ui className="list-unstyled">
@@ -16,13 +18,24 @@ function Footer() {
                 <li><FaTwitter /></li>
               </ui>
             </div>
-            {/* Column2 */}
+            
+            {/* Column 2 */}
+            <div className="col">
+              <h4 style={{textDecorationLine: 'underline'}}>Account</h4>
+              <ui className="list-unstyled">
+                <li>Account Management <FaUserCircle /></li>
+                <li>Settings <FaCog /></li>
+                <li>Privacy <FaLock /></li>
+              </ui>
+            </div>
+
+            {/* Column 3 */}
             <div className="col">
               <h4 style={{textDecorationLine: 'underline'}}>Contact Us</h4>
               <ui className="list-unstyled">
-                <li>About Us</li>
-                <li>Support</li>
-                <li>Blog</li>
+                <li>About Us <FaBookReader /></li>
+                <li>Support <FaHandsHelping /></li>
+                <li><Button id="newsletter" variant="outline-info">Get The Newsletter</Button></li>
               </ui>
             </div>
           </div>
