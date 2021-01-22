@@ -1,0 +1,8 @@
+.sectionHeader {
+    color: white; 
+    background: #343A40!important;
+    z-index: 1; 
+    text-align: left; 
+    width: 100%;
+    padding: 10px;
+}

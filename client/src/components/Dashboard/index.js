@@ -6,6 +6,7 @@ import Footer from "../Footer";
 import API from '../../utils/API';
 import CustomizedTables from "../Table";
 import RecentSongs from "../RecentlyPlayed";
+import SectionHeader from "../SectionHeader";
 
 
 function Dashboard() {
@@ -25,8 +26,11 @@ function Dashboard() {
     return (
         <>
             <JumboScreen />
+            <SectionHeader sectionTitle="RECENTLY PLAYED" />
             <RecentSongs /><br/>
+            <SectionHeader sectionTitle="SEARCH BY ARTIST" />
             <Search />
+            <SectionHeader sectionTitle="PLAYLISTS" />
             <CustomizedTables/><br/><br/>
             <table className="results-container">
                 <tbody>
@@ -39,6 +43,7 @@ function Dashboard() {
                     ))}
                 </tbody>
             </table>
+            <SectionHeader sectionTitle="TRENDING ARTISTS" />
             <CardSet />
             <Footer />
         </>
