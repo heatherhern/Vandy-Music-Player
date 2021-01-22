@@ -1,10 +1,8 @@
 import { React, useState } from "react";
-import { useForm } from "react-hook-form";
-import "./style.css";
 import SearchResults from "../SearchResults";
 import Button from 'react-bootstrap/Button';
 import API from '../../utils/API';
-
+import "./style.css";
 
 function Search() {
     const [results, setResultsState] = useState([]);
