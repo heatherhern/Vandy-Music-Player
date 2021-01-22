@@ -19,86 +19,44 @@ function CardSet() {
             <CardColumns>
                 {/* Card #1 */}
                 <Card className="cardcolumn">
-                    <Card.Img variant="top" src={TheWeeknd} />
-                    {/* <Card.Body>
-                        <Card.Title>The Weeknd</Card.Title>
-                        <Card.Text>
-                            Grammmy Award-winning artist The Weeknd is a Canadian singer, songwriter and record producer with more than 75 million records sold worldwide.
-                            The Weeknd will headline the Super Bowl LV Halftime Show in February 2021. 
-                        </Card.Text>
-                        <Button variant="info">Learn More <FaRegThumbsUp /></Button>{' '}
-                        <Button variant="success"><a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ?si=tpTBijMgTjuCyTOmxrJtyA">Spotify</a><FaSpotify /></Button>
-                    </Card.Body> */}
+                    <a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ?si=tpTBijMgTjuCyTOmxrJtyA">
+                        <Card.Img variant="top" src={TheWeeknd} />
+                    </a>
                 </Card>
 
                 {/* Card #2 */}
                 <Card className="cardcolumn" >
-                    <Card.Img variant="top" src={ArianaGrande} />
-                    {/* <Card.Body>
-                        <Card.Title>Ariana Grande</Card.Title>
-                        <Card.Text>
-                        Ariana Grande's sixth studio album, Positions (2020), debuted at number-one in the UK and US. 
-                        Grande became the first artist to have five number-one debuts on the Hot 100 and to have their first five number ones debut at the top.
-                        </Card.Text>
-                        <Button variant="info"><a href="https://www.arianagrande.com">Learn More</a><FaRegThumbsUp /></Button>{' '}
-                        <Button variant="success"><a href="https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR?si=-RGhEldgQD257ok-Boqysw">Spotify</a><FaSpotify /></Button>
-                    </Card.Body> */}
+                    <a href="https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR?si=-RGhEldgQD257ok-Boqysw">
+                        <Card.Img variant="top" src={ArianaGrande} />
+                    </a>
                 </Card>
 
                 {/* Card #3 */}
                 <Card className="cardcolumn" size="small">
-                    <Card.Img variant="top" src={Billie} />
-                    {/* <Card.Body>
-                        <Card.Title>Billie Eillish</Card.Title>
-                        <Card.Text>
-                        Billie Eilish was 13 when she recorded her first viral hit, “Ocean Eyes,” at home with her brother. 
-                        At 17 she earmed 1 billion streams on Spotify, making her the youngest artist to top 1 billion streams on a project.
-                        </Card.Text>
-                        <Button variant="info"><a href="https://www.billieeilish.com">Learn More</a><FaRegThumbsUp /></Button>{' '}
-                        <Button variant="success"><a href="https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH?si=IuyrqMZsQrC_wmt0dHq7Uw">Spotify</a><FaSpotify /></Button>
-                    </Card.Body> */}
+                    <a href="https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH?si=IuyrqMZsQrC_wmt0dHq7Uw">
+                        <Card.Img variant="top" src={Billie} />
+                    </a>
                 </Card>
 
                 {/* Card #4 */}
                 <Card className="cardcolumn">
-                    <Card.Img variant="top" src={Justin} />
-                    {/* <Card.Body>
-                        <Card.Title>Justin Bieber</Card.Title>
-                        <Card.Text>
-                        Justin Drew Bieber was discovered by Record Exec Scooter Braun on YouTube at age 13. Today, 
-                        with five hit albums and sales of over 150 million records, Justin Bieber is one of the world's best-selling music artists. 
-                        </Card.Text>
-                        <Button variant="info"><a href="https://www.justinbiebermusic.com">Learn More</a><FaRegThumbsUp /></Button>{' '}
-                        <Button variant="success"><a href="https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s?si=shs-8QhoQ9m1NPL5xd4TUA">Spotify</a><FaSpotify /></Button>
-                    </Card.Body> */}
+                    <a href="https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s?si=shs-8QhoQ9m1NPL5xd4TUA">
+                        <Card.Img variant="top" src={Justin} />
+                    </a>
                 </Card>
 
                 {/* Card #5 */}
                 <Card className="cardcolumn">
-                    <Card.Img variant="top" src={DuaLipa} />
-                    {/* <Card.Body>
-                        <Card.Title>Dua Lipa</Card.Title>
-                        <Card.Text>
-                        Born and raised in London to Kosovar-Albanian parents, Dua Lipa signed to Warner Records in 2015. She released her self-titled debut in 2017 which featured the hit singles, 
-                        'IDGAF' and her first UK #1 hit 'New Rules'. 
-                        </Card.Text>
-                        <Button variant="info"><a href="https://www.dualipa.com">Learn More</a><FaRegThumbsUp /></Button>{' '}
-                        <Button variant="success"><a href="https://open.spotify.com/artist/6M2wZ9GZgrQXHCFfjv46we?si=GHexncSxSJqtY3gTjxez7w">Spotify</a><FaSpotify /></Button>
-                    </Card.Body> */}
+                    <a href="https://open.spotify.com/artist/6M2wZ9GZgrQXHCFfjv46we?si=GHexncSxSJqtY3gTjxez7w">
+                        <Card.Img variant="top" src={DuaLipa} />
+                    </a>
                 </Card>
 
                 {/* Card #6 */}
                 <Card className="cardcolumn">
-                    <Card.Img variant="top" src={PostMalone} />
-                    {/* <Card.Body>
-                        <Card.Title>Post Malone</Card.Title>
-                        <Card.Text>
-                        Austin Richard Post, known professionally as Post Malone, is an American rapper, 
-                        singer, songwriter, and record producer known for his introspective songwriting and unique vocal style in a range of styles.
-                        </Card.Text>
-                        <Button variant="info"><a href="http://www.postmalone.com">Learn More</a><FaRegThumbsUp /></Button>{' '}
-                        <Button variant="success"><a href="https://open.spotify.com/artist/246dkjvS1zLTtiykXe5h60?si=zEoTFp7yR1uQumd5EJUnig">Spotify</a><FaSpotify /></Button>
-                    </Card.Body> */}
+                    <a href="https://open.spotify.com/artist/246dkjvS1zLTtiykXe5h60?si=zEoTFp7yR1uQumd5EJUnig">
+                        <Card.Img variant="top" src={PostMalone} />
+                    </a>
                 </Card>
 
             </CardColumns>

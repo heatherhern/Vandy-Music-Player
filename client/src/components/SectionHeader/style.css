@@ -1,8 +1,9 @@
 .sectionHeader {
     color: white; 
-    background: #343A40!important;
+    background: rgba(52, 58, 64, 0.788)!important;
     z-index: 1; 
     text-align: left; 
     width: 100%;
-    padding: 10px;
+    padding: 5px;
+    font-size: 25px;
 }

@@ -10,7 +10,6 @@ function Nav(props) {
     return (
         <>
             <Navbar bg="dark" variant="dark" sticky="top">
-
                 <Navbar.Brand href="/dashboard">
                     <FaHome /> {' '}
                     Vandy Music Player
