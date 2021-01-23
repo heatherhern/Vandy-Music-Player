@@ -14,7 +14,6 @@ function JumboScreen() {
         <video className="video-background" autoPlay loop muted>
           <source src={BackgroundVideo} type="video/mp4" />
         </video>
-
       </Jumbotron>
     </>
   );

@@ -34,6 +34,7 @@ function Dashboard() {
             <CustomizedTables/><br/><br/>
             <table className="results-container">
                 <tbody>
+                    {console.log(playlist)}
                     {playlist.map((song, index) => (
                         <tr key={index}>
                             <td>

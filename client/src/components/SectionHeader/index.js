@@ -6,7 +6,7 @@ function SectionHeader(props) {
         <div>
             <h2 className="sectionHeader">{props.sectionTitle}</h2>
         </div>
-    )
+    );
 }
 
 export default SectionHeader

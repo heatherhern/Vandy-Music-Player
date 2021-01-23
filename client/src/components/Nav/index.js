@@ -21,13 +21,11 @@ function Nav(props) {
                         Signed in as: <a href="#login">{props.firstName}<FaUserAlt /></a>
                     </Navbar.Text>
                 </Navbar.Collapse>
-
                 <div className="signout">
                 <Link to="/login">
                     <Button variant="info">Sign Out</Button>
                 </Link>
                 </div>
-
             </Navbar>
         </>
     );
