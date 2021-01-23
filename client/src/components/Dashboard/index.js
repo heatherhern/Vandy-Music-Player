@@ -7,6 +7,7 @@ import API from '../../utils/API';
 import CustomizedTables from "../Table";
 import RecentSongs from "../RecentlyPlayed";
 import SectionHeader from "../SectionHeader";
+import MediaControlCard from "../CurrentlyPlaying";
 
 
 function Dashboard() {
@@ -29,9 +30,9 @@ function Dashboard() {
             <SectionHeader sectionTitle="RECENTLY PLAYED" />
             <RecentSongs /><br/>
             <SectionHeader sectionTitle="SEARCH BY ARTIST" />
-            <Search />
+            <Search /><br/>
             <SectionHeader sectionTitle="PLAYLISTS" />
-            <CustomizedTables/><br/><br/>
+            <CustomizedTables/><br/>
             <table className="results-container">
                 <tbody>
                     {playlist.map((song, index) => (
@@ -43,6 +44,8 @@ function Dashboard() {
                     ))}
                 </tbody>
             </table>
+            <SectionHeader sectionTitle="NOW PLAYING" />
+            <MediaControlCard /><br/>
             <SectionHeader sectionTitle="TRENDING ARTISTS" />
             <CardSet />
             <Footer />

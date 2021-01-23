@@ -18,7 +18,7 @@ function Nav(props) {
                 <InputSlider />
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text>
-                        Signed in as: <a href="#login">{props.firstName}<FaUserAlt /></a>
+                        Signed in: <a href="#login">{props.firstName}<FaUserAlt /></a>
                     </Navbar.Text>
                 </Navbar.Collapse>
 
