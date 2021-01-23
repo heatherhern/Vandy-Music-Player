@@ -66,7 +66,7 @@ function RecentSongs() {
                 </Card.Body>
             </Card>
         </CardDeck>
-    )
+    );
 }
 
 export default RecentSongs;

@@ -20,6 +20,9 @@ function Search() {
             res = data.data.toptracks.track.map(result => {
             const song = {
                     songName: result.name,
+                    artist: result.artist.name,
+                    listeners: result.listeners,
+                    playcount: result.playcount,
                 }
                 return song;
             });
@@ -39,6 +42,7 @@ function Search() {
         API.saveSong(song)
             .then(function(data) {
                 console.log(data)
+                window.location.reload();
             })
             .catch(err => console.log(err));
     };

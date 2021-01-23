@@ -14,7 +14,6 @@ function NotFoundPage() {
                 </Link>
             </p>
         </>
-
     );
 }
 export default NotFoundPage;

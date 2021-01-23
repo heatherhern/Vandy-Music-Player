@@ -9,10 +9,8 @@ function TableHeader() {
                 <th>Album</th>
                 <th>Year</th>
             </tr>
-        </div>
-
-        
-    )
+        </div>       
+    );
 }
 
 export default TableHeader;
