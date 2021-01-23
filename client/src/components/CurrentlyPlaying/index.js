@@ -14,8 +14,8 @@ function NowPlaying() {
   return (
     <CardDeck>
 
-      <Card bg="dark" text="light">
-        <Card.Img variant="top" src={Muse} />
+      <Card bg="dark" text="light" >
+        <Card.Img variant="top" src={Muse} className="blurimage" />
         <Card.Body>
           <Card.Title style={{textAlign: "center"}} className="playheader"><b>Previous</b></Card.Title>
           <Card.Text style={{textAlign: "center"}}>
@@ -24,7 +24,7 @@ function NowPlaying() {
         </Card.Body> 
       </Card>
 
-      <Card bg="dark" text="light">
+      <Card bg="dark" text="light" className="shadow">
         <Card.Img variant="top" src={ColdPlay} />
         <Card.Body>
           <Card.Title style={{textAlign: "center"}} className="playheader"><b>Now Playing</b></Card.Title>
@@ -46,7 +46,7 @@ function NowPlaying() {
       </Card>
 
       <Card bg="dark" text="light">
-        <Card.Img variant="top" src={RockWithYou} />
+        <Card.Img variant="top" src={RockWithYou} className="blurimage"/>
         <Card.Body>
           <Card.Title style={{textAlign: "center"}} className="playheader"><b>Up Next</b></Card.Title>
           <Card.Text style={{textAlign: "center"}}>
