@@ -41,3 +41,8 @@
     font-size: 16px;
     padding: 16px 32px;
   }
+
+  .blurimage {
+    filter: blur(2px);
+  -webkit-filter: blur(2px);
+  }
