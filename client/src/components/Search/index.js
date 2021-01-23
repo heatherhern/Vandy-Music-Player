@@ -1,10 +1,8 @@
 import { React, useState } from "react";
-import { useForm } from "react-hook-form";
-import "./style.css";
 import SearchResults from "../SearchResults";
 import Button from 'react-bootstrap/Button';
 import API from '../../utils/API';
-
+import "./style.css";
 
 function Search() {
     const [results, setResultsState] = useState([]);
@@ -22,6 +20,9 @@ function Search() {
             res = data.data.toptracks.track.map(result => {
             const song = {
                     songName: result.name,
+                    artist: result.artist.name,
+                    listeners: result.listeners,
+                    playcount: result.playcount,
                 }
                 return song;
             });
@@ -41,6 +42,7 @@ function Search() {
         API.saveSong(song)
             .then(function(data) {
                 console.log(data)
+                window.location.reload();
             })
             .catch(err => console.log(err));
     };

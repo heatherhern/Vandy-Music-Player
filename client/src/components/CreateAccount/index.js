@@ -9,21 +9,6 @@ const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 );
 
-const formValid = ({ formErrors, ...rest }) => {
-  let valid = true;
-
-  // validate form errors being empty
-  Object.values(formErrors).forEach(val => {
-    val.length > 0 && (valid = false);
-  });
-
-  // validate the form was filled out
-  Object.values(rest).forEach(val => {
-    val === null && (valid = false);
-  });
-
-  return valid;
-};
 
 class CreateAccount extends Component {
   constructor(props) {
@@ -55,7 +40,7 @@ class CreateAccount extends Component {
       this.setState({ signedUp: true })
     }).catch((err) => {
       console.log(err)
-    })
+    });
   }
 
   handleChange = e => {
@@ -84,9 +69,9 @@ class CreateAccount extends Component {
         break;
       default:
         break;
-    }
+    };
     this.setState({ formErrors, [name]: value }, () => console.log(this.state));
-  };
+  }
 
   render() {
     const { formErrors } = this.state;
@@ -170,7 +155,7 @@ class CreateAccount extends Component {
         </div>
       </>
     );
-  }
+  };
 }
 
 export default CreateAccount;
