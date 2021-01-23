@@ -7,7 +7,7 @@ import API from '../../utils/API';
 import CustomizedTables from "../Table";
 import RecentSongs from "../RecentlyPlayed";
 import SectionHeader from "../SectionHeader";
-import MediaControlCard from "../CurrentlyPlaying";
+import NowPlaying from "../CurrentlyPlaying";
 
 
 function Dashboard() {
@@ -45,8 +45,7 @@ function Dashboard() {
                     ))}
                 </tbody>
             </table>
-            <SectionHeader sectionTitle="NOW PLAYING" />
-            <MediaControlCard /><br/>
+            <NowPlaying /><br/>
             <SectionHeader sectionTitle="TRENDING ARTISTS" />
             <CardSet />
             <Footer />

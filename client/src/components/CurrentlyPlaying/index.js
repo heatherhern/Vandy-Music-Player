@@ -1,73 +1,61 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
+import React from "react";
+import CardDeck from 'react-bootstrap/CardDeck';
+import Card from 'react-bootstrap/Card';
+import ColdPlay from "../CurrentlyPlaying/ColdPlay.png";
+import Muse from "../CurrentlyPlaying/Muse.jpg";
+import RockWithYou from "../CurrentlyPlaying/RockWithYou.jpg";
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
-import AlbumCover from "../CurrentlyPlaying/AlbumCover.jpg";
+import IconButton from '@material-ui/core/IconButton';
+import "./style.css";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-  },
-  details: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  content: {
-    flex: '1 0 auto',
-  },
-  cover: {
-    width: 151,
-  },
-  controls: {
-    display: 'flex',
-    alignItems: 'center',
-    paddingLeft: theme.spacing(1),
-    paddingBottom: theme.spacing(1),
-  },
-  playIcon: {
-    height: 38,
-    width: 38,
-  },
-}));
-
-export default function MediaControlCard() {
-  const classes = useStyles();
-  const theme = useTheme();
-
+function NowPlaying() {
   return (
-    <Card className={classes.root}>
-      <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <Typography component="h5" variant="h5">
-            Live From Space
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            Mac Miller
-          </Typography>
-        </CardContent>
-        <div className={classes.controls}>
+    <CardDeck>
+
+      <Card bg="dark" text="light">
+        <Card.Img variant="top" src={Muse} />
+        <Card.Body>
+          <Card.Title style={{textAlign: "center"}} className="playheader"><b>Previous</b></Card.Title>
+          <Card.Text style={{textAlign: "center"}}>
+            Muse - Uprising
+          </Card.Text>
+        </Card.Body> 
+      </Card>
+
+      <Card bg="dark" text="light">
+        <Card.Img variant="top" src={ColdPlay} />
+        <Card.Body>
+          <Card.Title style={{textAlign: "center"}} className="playheader"><b>Now Playing</b></Card.Title>
+          <Card.Text style={{textAlign: "center"}}>
+            Coldplay - Sky Full Of Stars 
+          </Card.Text>
+          <div style={{textAlign: "center"}}>
           <IconButton aria-label="previous">
-            {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
+            <SkipPreviousIcon style={{color: "white"}}/>
           </IconButton>
           <IconButton aria-label="play/pause">
-            <PlayArrowIcon className={classes.playIcon} />
+            <PlayArrowIcon style={{color: "white"}}/>
           </IconButton>
           <IconButton aria-label="next">
-            {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
+           <SkipNextIcon style={{color: "white"}}/>
           </IconButton>
-        </div>
-      </div>
-      <CardMedia
-        className={classes.cover}
-        image={AlbumCover}
-        title="Live from space album cover"
-      />
-    </Card>
-  );
+          </div>
+        </Card.Body>
+      </Card>
+
+      <Card bg="dark" text="light">
+        <Card.Img variant="top" src={RockWithYou} />
+        <Card.Body>
+          <Card.Title style={{textAlign: "center"}} className="playheader"><b>Up Next</b></Card.Title>
+          <Card.Text style={{textAlign: "center"}}>
+            Michael Jackson - Rock With You
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </CardDeck>
+  )
 }
+
+export default NowPlaying;

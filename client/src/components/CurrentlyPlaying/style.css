@@ -1,3 +1,11 @@
 #contenthere{
     background: grey;
 }
+
+.playingcards {
+    box-shadow: 10px 5px 15px grey;
+}
+
+.playheader {
+    font-size: 25px;
+}
