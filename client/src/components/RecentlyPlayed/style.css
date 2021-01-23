@@ -1,5 +1,9 @@
 .animation:hover {
-    box-shadow: 0px 0px 40px 10px rgb(59, 59, 59);
+    box-shadow: 0px 0px 40px 10px rgb(39, 39, 39);
     transition: 0.9s;
+}
+
+.animation {
+    box-shadow: 10px 5px 15px grey;
 }
 

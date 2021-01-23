@@ -1,11 +1,10 @@
 .sectionHeader {
     color: white; 
     /* background: rgba(52, 58, 64, 0.788)!important; */
-    background: #6e6e6e;
+    background: #8f8f8fbb;
     z-index: 1; 
-    text-align: center; 
-    width: 20%;
+    text-align: left; 
+    width: 100%;
     padding: 5px;
     font-size: 25px;
-    border-radius: 25px;
 }
