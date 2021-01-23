@@ -60,7 +60,7 @@ export default function InputSlider() {
             margin="dense"
             onChange={handleInputChange}
             onBlur={handleBlur}
-            style={{color: "lightgrey"}}
+            style={{color: "white"}}
             inputProps={{
               step: 10,
               min: 0,
